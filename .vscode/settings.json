@@ -1,0 +1,10 @@
+{
+
+    "qt-qml.qmlls.customExePath": "views",
+    // "python.autoComplete.extraPaths": [
+    //     "./models", "views", "assets", "controllers", "resources"
+    // ],
+    "python.analysis.extraPaths": [
+        "./models"
+    ]
+}
