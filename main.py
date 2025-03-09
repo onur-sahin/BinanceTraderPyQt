@@ -1,6 +1,6 @@
 from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtQml import QQmlApplicationEngine
-from controllers.main_controller import MainController
+from main_controller import MainController
 import os
 
 if __name__ == "__main__":

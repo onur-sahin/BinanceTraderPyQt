@@ -5,6 +5,6 @@
     //     "./models", "views", "assets", "controllers", "resources"
     // ],
     "python.analysis.extraPaths": [
-        "./models"
+        "${env:PYTHONPATH}"
     ]
 }
