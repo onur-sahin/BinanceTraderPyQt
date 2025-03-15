@@ -4,4 +4,7 @@ channels:
 dependencies:
   - python=3.10.16
   - pip=25.0.1
-  - lightning =2.5.0.post0
+  - lightning=2.5.0.post0
+  - psycopg2=2.9.9
+  - cryptography
+  - conda config --set channel_priority strict

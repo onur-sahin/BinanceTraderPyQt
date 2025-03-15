@@ -1,10 +1,25 @@
 {
 
-    "qt-qml.qmlls.customExePath": "views",
-    // "python.autoComplete.extraPaths": [
-    //     "./models", "views", "assets", "controllers", "resources"
-    // ],
+    "qt-qml.qmlls.customExePath": "/home/adam/Qt/6.8.2/gcc_64/bin/qmlls",
+    "qt-qml.qmlls.enabled": true,
+    "qt-qml.qmlls.additionalImportPaths": ["./qml", "/home/adam/proj/BinanceTraderPyQt/qml", "/home/adam/proj/BinanceTraderPyQt/home", "/home/adam/proj/BinanceTraderPyQt/qml/dbLogin"],
+    "python.autoComplete.extraPaths": [
+        "./models", "./qml", "assets", "controllers", "resources",
+        "./qml/dbLogin"
+    ],
     "python.analysis.extraPaths": [
         "${env:PYTHONPATH}"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "binancedb",
+            "database": "binancedb",
+            "username": "postgres",
+            "password": "7532+7532+"
+        }
     ]
 }
