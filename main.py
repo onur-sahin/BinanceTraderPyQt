@@ -26,6 +26,7 @@ if __name__ == "__main__":
     app        = QGuiApplication([])  # QCoreApplication yerine QGuiApplication KULLANILIYOR
     engine     = QQmlApplicationEngine()
     controller = RootCoord(engine)
+    
     controller.load_qml()
 
     app.exec()
