@@ -7,35 +7,35 @@ AddAccountForm {
 
 
 
-    tf_accountName.text         : addAccountMdl.p_accountName
-    tf_accountName.onTextChanged: addAccountMdl.p_accountName = tf_accountName.text
+    tf_accountName.text         : addAccountMdl.accountName
+    tf_accountName.onTextChanged: addAccountMdl.accountName = tf_accountName.text
 
-    tf_apiKey.text         : addAccountMdl.p_apiKey
-    tf_apiKey.onTextChanged: addAccountMdl.p_apiKey = tf_apiKey.text
+    tf_apiKey.text         : addAccountMdl.apiKey
+    tf_apiKey.onTextChanged: addAccountMdl.apiKey = tf_apiKey.text
 
-    tf_apiSecret.text         : addAccountMdl.p_apiSecret
-    tf_apiSecret.onTextChanged: addAccountMdl.p_apiSecret = tf_apiSecret.text
+    tf_apiSecret.text         : addAccountMdl.apiSecret
+    tf_apiSecret.onTextChanged: addAccountMdl.apiSecret = tf_apiSecret.text
 
-    tf_testResult.text: addAccountMdl.p_testResult
+    tf_testResult.text: addAccountMdl.testResult
     
 
-    onPr_accountPassChanged: addAccountMdl.p_accountPass = pr_accountPass
+    onPr_accountPassChanged: addAccountMdl.accountPass = pr_accountPass
 
-    cb_rememberAccountPass.onCheckedChanged : addAccountMdl.p_rememberAccountPass = cb_rememberAccountPass.checked
+    cb_rememberAccountPass.onCheckedChanged : addAccountMdl.rememberAccountPass = cb_rememberAccountPass.checked
 
 
     bg_accountGroup.onCheckedButtonChanged: {
         if (bg_accountGroup.checkedButton === cb_realAccount) {
-            addAccountMdl.p_realAccount = true;
+            addAccountMdl.realAccount = true;
         } else {
-            addAccountMdl.p_realAccount = false;
+            addAccountMdl.realAccount = false;
         }
     }
 
     Connections {
         target: root_cl
         function onCompleted(){
-            if (addAccountMdl.p_realAccount) {
+            if (addAccountMdl.realAccount) {
                 bg_accountGroup.checkedButton = cb_realAccount;
             } else {
                 bg_accountGroup.checkedButton = cb_mockAccount;

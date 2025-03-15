@@ -6,7 +6,7 @@ import QtQuick.Layouts
 
 AddModelForm{
 
-    tf_modelName.text           : addModelMdl.getModelName()
+    tf_modelName.text           : addModelMdl.modelName
     cb_modelType.model          : addModelMdl.listOfModelTypes
     cb_modelType.onModelChanged : cb_modelType.model.count>0 ? 0 : -1
 

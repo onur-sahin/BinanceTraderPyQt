@@ -1,6 +1,5 @@
-from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty, QThread, QVariantList, QMutex
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty, QThread, QMutex
 from PyQt6.QtCore import Qt
-from PyQt6.QtConcurrent import map
 import os
 import subprocess
 
@@ -31,7 +30,7 @@ class ModelMdl(QObject):
         self._process = None
         self._thrd = None
 
-        self.networksStatus = QVariantList()
+        self._networksStatus   = None 
 
     # Properties with getter and setter methods
 
@@ -130,7 +129,7 @@ class ModelMdl(QObject):
         return [name[:-3] for name in network_names]
 
     def setNetworksStatus(self, network_list):
-        self.networksStatus = QVariantList(network_list)
+        self.networksStatus = network_list
 
     def getNetworksStatus(self):
         return self.networksStatus
@@ -150,12 +149,12 @@ class ModelMdl(QObject):
 if __name__ == "__main__":
     model = ModelMdl()
 
-    model.modelName = "Test Model"
-    model.defaultPair = "Pair A"
-    model.windowSize = 15
+    model.modelName       = "Test Model"
+    model.defaultPair     = "Pair A"
+    model.windowSize      = 15
     model.defaultInterval = "5s"
-    model.modelType = "Type1"
-    model.notes = "Some notes"
+    model.modelType       = "Type1"
+    model.notes           = "Some notes"
 
     print(model.modelName)
     print(model.defaultPair)

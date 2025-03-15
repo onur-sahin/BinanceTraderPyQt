@@ -209,6 +209,13 @@ class AccountMdl(QObject):
 
     @pyqtSlot()
     def test_account(self):
+    #     try:
+    #         # Hesap bilgilerini getirerek API anahtarlarının geçerliliğini kontrol et
+    #         account_info = client.get_account()
+    #         print("API Key geçerli! Hesap bilgileri alındı.")
+    #     except BinanceAPIException as e:
+    #         print(f"API Key hatalı veya izinler eksik: {e}")
+
         # respond = Binance.binance_api_request(
         #     self.apiKey,
         #     self.apiSecret,

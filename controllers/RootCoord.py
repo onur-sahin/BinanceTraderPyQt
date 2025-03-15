@@ -1,11 +1,14 @@
 from PyQt6.QtCore import QObject
-from PyQt6.QtQml import QQmlApplicationEngine, qmlRegisterType
-from item_model import ItemModel
-from AccountMdl import AccountMdl
-from LogManager import LogManager
-from DBLoginMdl import DBLoginMdl
-from LogListMdl import LogListModelMdl
-from ModelMdl
+from PyQt6.QtQml  import QQmlApplicationEngine, qmlRegisterType
+from item_model   import ItemModel
+from AccountMdl   import AccountMdl
+from LogManager   import LogManager
+from DBLoginMdl   import DBLoginMdl
+from ModelMdl     import ModelMdl
+
+from LogListMdl          import LogListModelMdl
+from AccountListModelMdl import AccountListModelMdl
+from ModelListModelMdl   import ModelListModelMdl
 
 
 class RootCoord(QObject):
@@ -13,9 +16,14 @@ class RootCoord(QObject):
         super().__init__(parent=engine)
         self.engine          = engine
         self.model           = ItemModel(["Item 1", "Item 2", "Item 3"])
+
         self.dBLoginMdl      = DBLoginMdl(self)
         self.addModelMdl     = ModelMdl(self)
         self.addAccountMdl   = AccountMdl(self)
+
+        self.accountListModelMdl = AccountListModelMdl(self)
+        self.modelListModelMdl = ModelListModelMdl(self)
+    
 
     def load_qml(self):
         context = self.engine.rootContext()
@@ -31,7 +39,6 @@ class RootCoord(QObject):
         log.set_log_model(logModel)
         context.setContextProperty("logModel", logModel)
 
-        
 
         qmlRegisterType(AccountMdl,"com.binancetrader.AccountMdl" , 1, 0, "AccountMdl" );
         # qmlRegisterType<ModelMdl  > ("com.binancetrader.ModelMdl"   , 1, 0, "ModelMdl"   );
@@ -39,8 +46,11 @@ class RootCoord(QObject):
 
 
 
-        context.setContextProperty("dBLoginMdl", self.dBLoginMdl)
-        context.setContextProperty("addAccountMdl", self.addAccountMdl)
+        context.setContextProperty("dBLoginMdl"         , self.dBLoginMdl         )
+        context.setContextProperty("addModelMdl"        , self.addModelMdl        )
+        context.setContextProperty("addAccountMdl"      , self.addAccountMdl      )
+        context.setContextProperty("modelListModelMdl"  , self.modelListModelMdl  )
+        context.setContextProperty("accountListModelMdl", self.accountListModelMdl)
 
 
 
