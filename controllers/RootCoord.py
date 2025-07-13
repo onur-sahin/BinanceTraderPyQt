@@ -1,11 +1,12 @@
 from PyQt6.QtCore import QObject
-from PyQt6.QtQml  import QQmlApplicationEngine, qmlRegisterType
+from PyQt6.QtQml  import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonType
 from item_model   import ItemModel
 from AccountMdl   import AccountMdl
 from LogManager   import LogManager
 from DBLoginMdl   import DBLoginMdl
 from ModelMdl     import ModelMdl
 
+from AccountTypes import AccountTypes
 from LogListMdl          import LogListModelMdl
 from AccountListModelMdl import AccountListModelMdl
 from ModelListModelMdl   import ModelListModelMdl
@@ -38,6 +39,8 @@ class RootCoord(QObject):
         logModel = LogListModelMdl()
         log.set_log_model(logModel)
         context.setContextProperty("logModel", logModel)
+
+        qmlRegisterSingletonType(AccountTypes, "com.binancetrader.Enums.AccountTypes", 1, 0, lambda engine, script:AccountTypes(), name="AccountTypes")
 
 
         qmlRegisterType(AccountMdl,"com.binancetrader.AccountMdl" , 1, 0, "AccountMdl" );

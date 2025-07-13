@@ -50,6 +50,15 @@ AccountSelectForm{
         md_accountDelete.open();
     }
 
+
+    Connections {
+        target: addAccountMdl
+        function onNewAccountCreated(account) {
+            console.log(accountListModelMdl.addItem(account))
+
+        }
+    }
+
     Dialog{
 
         id:md_accountDelete

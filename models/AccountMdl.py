@@ -3,9 +3,12 @@ from PyQt6.QtCore import pyqtProperty, pyqtSlot
 import json
 import os
 from typing import List, Optional
+from Binance import BinanceDriver
 from DBManager import DBManager
 from CryptoManager import CryptoManager
 from HashManager import HashManager
+
+from AccountTypes import AccountTypes
 
 
 class AccountMdl(QObject):
@@ -28,19 +31,20 @@ class AccountMdl(QObject):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self._accountName          = ""
-        self._apiKey               = ""
-        self._apiSecret            = ""
-        self._realAccount          = True
-        self._testResult           = ""
-        self._accountPass          = ""
-        self._rememberAccountPass  = False
-        self._isLocked             = True
-        self._cryptedApiKey        = ""
-        self._cryptedApiSecret     = ""
-        self._accountNotes         = ""
-        self._accountType          = ""
-        self._cryptoManager        = CryptoManager()
+        self._accountName                   = ""
+        self._apiKey                        = ""
+        self._apiSecret                     = ""
+        self._realAccount                   = True
+        self._testResult                    = ""
+        self._accountPass                   = ""
+        self._rememberAccountPass           = False
+        self._isLocked                      = True
+        self._cryptedApiKey                 = ""
+        self._cryptedApiSecret              = ""
+        self._accountNotes                  = "a"
+        self._accountType                   = 0
+        self._cryptoManager                 = CryptoManager()
+        self._binanceDriver                 = BinanceDriver() # Every model has individual object of BinanceDriver's Class
 
         self.updatedDecryptedKeys.connect(self.onUpdatedDecryptedKeys)
 
@@ -162,7 +166,7 @@ class AccountMdl(QObject):
         return self._accountType
 
     @accountType.setter
-    def accountType(self, account_type:str):
+    def accountType(self, account_type:AccountTypes):
         if self._accountType != account_type:
             self._accountType = account_type
             self.accountTypeChanged.emit()
@@ -209,12 +213,15 @@ class AccountMdl(QObject):
 
     @pyqtSlot()
     def test_account(self):
-    #     try:
-    #         # Hesap bilgilerini getirerek API anahtarlarının geçerliliğini kontrol et
-    #         account_info = client.get_account()
-    #         print("API Key geçerli! Hesap bilgileri alındı.")
-    #     except BinanceAPIException as e:
-    #         print(f"API Key hatalı veya izinler eksik: {e}")
+
+
+
+        try:
+            # Hesap bilgilerini getirerek API anahtarlarının geçerliliğini kontrol et
+            account_info = Client(api_key=self.apiKey, api_secret=self.apiSecret, testnet=(not self.realAccount)).get_account()
+            print("API Key geçerli! Hesap bilgileri alındı.")
+        except BinanceAPIException as e:
+            print(f"API Key hatalı veya izinler eksik: {e}")
 
         # respond = Binance.binance_api_request(
         #     self.apiKey,
@@ -233,6 +240,10 @@ class AccountMdl(QObject):
     @staticmethod
     def get_account_keys_from_json():
         users_path = os.path.join(os.getcwd(), "..", "share", "users.json")
+
+        if not os.path.exists(users_path)  :
+            return []
+
         try:
             with open(users_path, "r") as file:
                 data = json.load(file)
@@ -280,19 +291,20 @@ class AccountMdl(QObject):
             print(f"Failed to remove account from JSON: {e}")
 
     @pyqtSlot()
-    def onLoadFromDatabaseRequested(self):
-        db = DBManager.getInstance()
+    def loadFromDatabaseRequested(self):
+        db = DBManager.get_instance()
         query = "SELECT * FROM tbl_accounts"
-        result = db.execute_dml_dql_query(query)
+        result = db.execute_select_return_dict(query)
         if not result:
             print("Failed to load accounts from database")
             return
 
         accounts_list = result
-        account_key_list = self.get_account_keys_from_json()
+        account_key_list = self.get_account_keys_from_json() 
 
         for account in accounts_list:
             account_name = account.get("account_name")
+            print(account_name)
             if any(acc.accountName == account_name for acc in self._accountsList):
                 continue
 
@@ -312,6 +324,7 @@ class AccountMdl(QObject):
 
     @staticmethod
     def create_accountMdl_from_data(vm:dict):
+
         account = AccountMdl()
         account.accountName      = vm.get("account_name" , "")
         account.realAccount      = vm.get("real_account" , True)

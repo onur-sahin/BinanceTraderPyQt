@@ -1,7 +1,10 @@
 from PyQt6.QtCore import QAbstractListModel, Qt, QModelIndex
-from PyQt6.QtCore import QVariant
+from PyQt6.QtCore import QVariant, QObject, QByteArray, pyqtSlot
 from CryptoManager import CryptoManager
 from HashManager import HashManager
+from binance.client import Client
+
+from Binance import BinanceDriver
 
 class AccountListModelMdl(QAbstractListModel):
     AccountNameRole = Qt.ItemDataRole.UserRole + 1
@@ -31,74 +34,77 @@ class AccountListModelMdl(QAbstractListModel):
         item = self.m_items[index.row()]
         
         if role == self.AccountNameRole:
-            return item.account_name
+            return item.accountName
         elif role == self.ApiKeyRole:
-            return item.api_key
+            return item.apiKey
         elif role == self.ApiSecretRole:
-            return item.api_secret
+            return item.apiSecret
         elif role == self.RealAccountRole:
-            return item.real_account
+            return item.realAccount
         elif role == self.TestResultRole:
-            return item.test_result
+            return item.testResult
         elif role == self.AccountPassRole:
-            return item.account_pass
+            return item.accountPass
         elif role == self.RememberAccountPassRole:
-            return item.remember_account_pass
+            return item.rememberAccountPass
         elif role == self.IsLockedRole:
-            return item.is_locked
+            return item.isLocked
         elif role == self.CryptedApiKeyRole:
-            return item.crypted_api_key
+            return item.cryptedApiKey
         elif role == self.CryptedApiSecretRole:
-            return item.crypted_api_secret
+            return item.cryptedApiSecret
         elif role == self.AccountNotesRole:
-            return item.account_notes
+            return item.accountNotes
         elif role == self.AccountTypeStringRole:
-            return item.account_type_string
+            return item.accountType
         else:
             return QVariant()
 
     def roleNames(self):
         roles = {
-            self.AccountNameRole:          "accountName",
-            self.ApiKeyRole:               "apiKey",
-            self.ApiSecretRole:            "apiSecret",
-            self.RealAccountRole:          "realAccount",
-            self.TestResultRole:           "testResult",
-            self.AccountPassRole:          "accountPass",
-            self.RememberAccountPassRole:  "rememberAccountPass",
-            self.IsLockedRole:             "isLocked",
-            self.CryptedApiKeyRole:        "cryptedApiKey",
-            self.CryptedApiSecretRole:     "cryptedApiSecret",
-            self.AccountNotesRole:         "accountNotes",
-            self.AccountTypeStringRole:    "accountTypeString"
+            self.AccountNameRole:          QByteArray(b"accountName"),         
+            self.ApiKeyRole:               QByteArray(b"apiKey"),              
+            self.ApiSecretRole:            QByteArray(b"apiSecret"),           
+            self.RealAccountRole:          QByteArray(b"realAccount"),         
+            self.TestResultRole:           QByteArray(b"testResult"),          
+            self.AccountPassRole:          QByteArray(b"accountPass"),          
+            self.RememberAccountPassRole:  QByteArray(b"rememberAccountPass"), 
+            self.IsLockedRole:             QByteArray(b"isLocked"),            
+            self.CryptedApiKeyRole:        QByteArray(b"cryptedApiKey"),       
+            self.CryptedApiSecretRole:     QByteArray(b"cryptedApiSecret"),    
+            self.AccountNotesRole:         QByteArray(b"accountNotes"),        
+            self.AccountTypeStringRole:    QByteArray(b"accountTypeString")    
         }
         return roles
-
-    def addItem(self, item):
+    @pyqtSlot(QObject)
+    def addItem(self, item):                
         self.beginInsertRows(QModelIndex(), len(self.m_items), len(self.m_items))
         self.m_items.append(item)
         self.endInsertRows()
 
+    @pyqtSlot(int, result=QObject)
     def getItem(self, index):
         if index < 0 or index >= len(self.m_items):
             return {}
 
         item = self.m_items[index]
-        account_data = {
-            "accountName":          item.account_name,
-            "apiKey":               item.api_key,
-            "apiSecret":            item.api_secret,
-            "realAccount":          item.real_account,
-            "testResult":           item.test_result,
-            "accountPass":          item.account_pass,
-            "rememberAccountPass":  item.remember_account_pass,
-            "isLocked":             item.is_locked,
-            "cryptedApiKey":        item.crypted_api_key,
-            "cryptedApiSecret":     item.crypted_api_secret,
-            "accountNotes":         item.account_notes,
-            "accountTypeString":    item.account_type_string
-        }
-        return account_data
+        return item
+
+        # account_data = {
+        #     "accountName":          item.accountName        ,
+        #     "apiKey":               item.apiKey             ,
+        #     "apiSecret":            item.apiSecret          ,
+        #     "realAccount":          item.realAccount        ,
+        #     "testResult":           item.testResult         ,
+        #     "accountPass":          item.accountPass        ,
+        #     "rememberAccountPass":  item.rememberAccountPass,
+        #     "isLocked":             item.isLocked           ,
+        #     "cryptedApiKey":        item.cryptedApiKey      ,
+        #     "cryptedApiSecret":     item.cryptedApiSecret   ,
+        #     "accountNotes":         item.accountNotes       ,
+        #     "accountTypeString":    item.accountType  
+        # }
+        # return account_data
 
     def removeRow(self, row, parent=QModelIndex()):
         if row < 0 or row >= len(self.m_items):
@@ -110,24 +116,12 @@ class AccountListModelMdl(QAbstractListModel):
         
         # Custom deletion logic, similar to the C++ version
         return True
-
+    @pyqtSlot(str, str, result=bool)
     def testAccount(self, api_key, api_secret):
-        # Simulate a binance API call here, just as in the C++ version
-        # response = binance_api_request(api_key, api_secret)
+        return BinanceDriver.test_binance_credentials(api_key, api_secret)
 
-    #     try:
-    # # Hesap bilgilerini getirerek API anahtarlarının geçerliliğini kontrol et
-    #     account_info = client.get_account()
-    #     print("API Key geçerli! Hesap bilgileri alındı.")
-    #     except BinanceAPIException as e:
-    #         print(f"API Key hatalı veya izinler eksik: {e}")
-    #     if "uid" in response:
-    #         return "Account is valid"
-    #     else:
-    #         return response
 
-        return "Account is valid"
-
+    @pyqtSlot(int, str)
     def decryptKeys(self, idx, account_pass):
         item = self.m_items[idx]
         # Use a CryptoManager or similar approach
@@ -135,12 +129,12 @@ class AccountListModelMdl(QAbstractListModel):
         hash_value = HashManager.get_instance().hash(account_pass)
         crypto_manager.loadKey(hash_value, False)
         
-        decrypted_api_key = crypto_manager.decrypt(item.crypted_api_key)
-        decrypted_api_secret = crypto_manager.decrypt(item.crypted_api_secret)
+        decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
+        decrypted_api_secret = crypto_manager.decrypt(item.cryptedApiSecret)
         
-        item.api_key = decrypted_api_key
-        item.api_secret = decrypted_api_secret
-        item.is_locked = not (decrypted_api_key and decrypted_api_secret)
+        item.apiKey    = decrypted_api_key
+        item.apiSecret = decrypted_api_secret
+        item.isLocked  = not (decrypted_api_key and decrypted_api_secret)
 
         self.dataChanged.emit(self.index(idx), self.index(idx), [self.IsLockedRole])
 

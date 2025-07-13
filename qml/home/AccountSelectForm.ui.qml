@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick.Controls.Fusion
 
 ColumnLayout{
     property alias btn_addAccount   : btn_addAccount
@@ -39,8 +38,6 @@ ColumnLayout{
                     Layout.topMargin:20
 
                 }
-
-            
             }
 
         }

@@ -1,4 +1,4 @@
-from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty, QThread, QMutex
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty, pyqtSlot, QThread, QMutex
 from PyQt6.QtCore import Qt
 import os
 import subprocess
@@ -105,31 +105,44 @@ class ModelMdl(QObject):
 
     # Methods
 
+    @pyqtSlot(result=bool)
     def save_model(self):
-        # This would typically interact with a DB or other resources
-        pass
+
+        return True
 
     def processModelsParallel(self):
         map(self.update_model_types, self._listOfModels)
 
+    @pyqtSlot()
     def update_model_types(self):
-        folder_path = os.path.join(os.getcwd(), "../pythonModules/neurolNetworks")
+
+        folder_path = os.path.join(os.getcwd(), "neurolNetworks")
+
         if not os.path.exists(folder_path):
             print(f"Neural network folder not exists. Path: {folder_path}")
             return
 
+        # sadece klasörleri result'a atar
         result = [d for d in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, d))]
+
+        if "__pycache__" in result :  result.remove("__pycache__")
+
         self.listOfModelTypes = result
 
+    @pyqtSlot(result=list)
     def getNetworkNames(self):
-        networks_path = os.path.join(os.getcwd(), "../pythonModules/neurolNetworks/nn_models")
+        networks_path = os.path.join(os.getcwd(), "neurolNetworks/" + self.modelType)
         network_names = [f for f in os.listdir(networks_path) if f.endswith(".py")]
+
+        if "__init__.py" in network_names : network_names.remove("__init__.py")
 
         # Removing file extensions
         return [name[:-3] for name in network_names]
 
+    @pyqtSlot(list)
     def setNetworksStatus(self, network_list):
         self.networksStatus = network_list
+        print(self.networksStatus)
 
     def getNetworksStatus(self):
         return self.networksStatus
@@ -143,6 +156,20 @@ class ModelMdl(QObject):
 
     def processModelsParallel(self):
         map(self.update_model_types, self._listOfModels)
+
+    @pyqtSlot()
+    def printModel(self):
+        msg = f"""
+        model.modelName       : {self.modelName       }
+        model.defaultPair     : {self.defaultPair     }
+        model.windowSize      : {self.windowSize      }
+        model.defaultInterval : {self.defaultInterval }
+        model.modelType       : {self.modelType       }
+        model.notes           : {self.notes           }
+        model.listOfModelTypes: {self.listOfModelTypes}
+        """
+
+        print(msg)
 
 
 # Simulating a simple usage example

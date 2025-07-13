@@ -9,6 +9,7 @@ Window {
     height: Screen.height * 0.5
     x: 100
     y: 100
+    color:"grey"
 
     property alias btn_save              : btn_save
     property alias tf_modelName          : tf_modelName
@@ -23,6 +24,7 @@ Window {
     property alias cl_network            : cl_network
 
     property alias btn_save_network      : btn_save_network
+    property alias btn_cancel_network    : btn_cancel_network
 
 
     ColumnLayout {
@@ -180,7 +182,8 @@ Window {
                 
                 ColumnLayout{
                     id:cl_network
-                    property bool created: false
+                    property bool   created   : false
+                    property string modelType : ""
                     // Layout.fillWidth:true
                     // Layout.fillHeight:true
                 }
@@ -195,7 +198,8 @@ Window {
                         Layout.fillWidth:true
                     }
                     Button{
-                        text:"btn2"
+                        id:btn_cancel_network
+                        text:"CANCEL"
                         Layout.fillWidth:true
                     }
                 }

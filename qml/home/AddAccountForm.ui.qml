@@ -1,10 +1,10 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick.Controls.Fusion
-
 
 import com.binancetrader.AccountMdl 1.0
+import com.binancetrader.Enums.AccountTypes 1.0
+
 
 Window {
     id: root
@@ -12,7 +12,7 @@ Window {
     height: Screen.height * 0.5
     x: 100
     y: 100
-    // color:"grey"
+    color:"grey"
 
 
     property alias btn_test_key_and_secret   : btn_test_key_and_secret
@@ -138,18 +138,18 @@ Window {
                 CheckBox {
                     id: cb_binance
                     Layout.fillWidth: true
-                    text: "Binance Account"
+                    text: AccountTypes.to_string(0)  // enum değerleri aslında int olduğundan bu ifade 0 numaralı enumun stringini döndürür
                     ButtonGroup.group: bg_typeGroup
                 }
                 CheckBox {
                     id: cb_cm_future
                     Layout.fillWidth: true
-                    text: "CM Future"
+                    text: AccountTypes.to_string(1)
                     ButtonGroup.group: bg_typeGroup
                 }
                 CheckBox {
                     id: cb_um_future
-                    text: "UM Future"
+                    text: AccountTypes.to_string(2)
                     ButtonGroup.group: bg_typeGroup
                 }
             }
@@ -179,7 +179,7 @@ Window {
             id: cl_accountPassword
             Layout.rightMargin: 20
             Layout.leftMargin: 20
-            property bool passwordsMatch: false // Şifrelerin eşit olup olmadığını kontrol eden flag
+            property bool    passwordsMatch: false // Şifrelerin eşit olup olmadığını kontrol eden flag
             property string pr_accountPass : passwordsMatch ? passwordField1.text : ""
 
             Text {

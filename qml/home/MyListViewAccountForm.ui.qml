@@ -15,6 +15,7 @@ ListView {
     signal clicked_mouseArea_third(int index)
 
     signal doubleClicked_mouseArea_lock(int index)
+    signal notes_editing_finished(int index)
 
     model: accountListModelMdl
 
@@ -84,9 +85,10 @@ ListView {
                     id: secondField
                     anchors.centerIn:parent
                     width: parent.width
-                    text: model.accountNotes
+                    text:  model.accountNotes
                     readOnly: true
                     focus: true
+                    onEditingFinished: notes_editing_finished(index)
                 }
 
                 MouseArea {

@@ -1,5 +1,6 @@
 import QtQuick
 import com.binancetrader.AccountMdl 1.0
+import com.binancetrader.Enums.AccountTypes 1.0
 
 AddAccountForm {
     id:root
@@ -10,16 +11,16 @@ AddAccountForm {
     tf_accountName.text         : addAccountMdl.accountName
     tf_accountName.onTextChanged: addAccountMdl.accountName = tf_accountName.text
 
-    tf_apiKey.text         : addAccountMdl.apiKey
-    tf_apiKey.onTextChanged: addAccountMdl.apiKey = tf_apiKey.text
+    tf_apiKey.text              : addAccountMdl.apiKey
+    tf_apiKey.onTextChanged     : addAccountMdl.apiKey = tf_apiKey.text
 
-    tf_apiSecret.text         : addAccountMdl.apiSecret
-    tf_apiSecret.onTextChanged: addAccountMdl.apiSecret = tf_apiSecret.text
+    tf_apiSecret.text           : addAccountMdl.apiSecret
+    tf_apiSecret.onTextChanged  : addAccountMdl.apiSecret = tf_apiSecret.text
 
-    tf_testResult.text: addAccountMdl.testResult
+    tf_testResult.text          : addAccountMdl.testResult
     
 
-    onPr_accountPassChanged: addAccountMdl.accountPass = pr_accountPass
+    onPr_accountPassChanged     : addAccountMdl.accountPass = pr_accountPass
 
     cb_rememberAccountPass.onCheckedChanged : addAccountMdl.rememberAccountPass = cb_rememberAccountPass.checked
 
@@ -32,6 +33,12 @@ AddAccountForm {
         }
     }
 
+    bg_typeGroup.onCheckedButtonChanged: {
+        addAccountMdl.accountType = AccountTypes.from_string( bg_typeGroup.checkedButton.text )
+    }
+
+
+
     Connections {
         target: root_cl
         function onCompleted(){
@@ -40,6 +47,13 @@ AddAccountForm {
             } else {
                 bg_accountGroup.checkedButton = cb_mockAccount;
             }
+        }
+    }
+
+    Connections {
+        target:root_cl
+        function onCompleted(){
+            root.bg_typeGroup.checkedButton = root.cb_binance
         }
     }
 

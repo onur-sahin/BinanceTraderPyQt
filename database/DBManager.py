@@ -86,7 +86,7 @@ class DBManager:
         self.connect(dbname, user,password, host, port)
 
 
-    def execute_select( self, query: str, bindValues:dict|None = None ) -> list:
+    def execute_select_return_list( self, query: str, bindValues:dict|None = None ) -> list:
 
         result = list()
 
@@ -105,10 +105,13 @@ class DBManager:
         except Exception as e:
             raise psycopg2.DatabaseError("Failed to execute select query: ") from e
 
+        print(result)
+
         return result
+    
+    def execute_select_return_dict( self, query: str, bindValues:dict|None = None ) -> list:
 
-
-    def execute(self, query:str, bindValues:dict|None) -> None:
+        result = list()
 
         try:
             conn   = self.get_connection()
@@ -119,12 +122,35 @@ class DBManager:
             else:
                 cursor.execute(query, bindValues)
 
+            columns = [desc[0] for desc in cursor.description]
+            rows = cursor.fetchall()
+
+            for row in rows:
+                result.append(dict(zip(columns, row)))
+
             cursor.close()
 
         except Exception as e:
+            raise psycopg2.DatabaseError("Failed to execute select query: ") from e
+
+        return result
+
+
+    def execute(self, query:str, bindValues:dict|None = None) -> None:
+
+        try:
+            conn   = self.get_connection()
+            cursor = conn.cursor()
+
+            if(bindValues is None):
+                cursor.execute(query)
+            else:
+                cursor.execute(query, bindValues)
+
+            cursor.close()    
+
+        except Exception as e:
             raise psycopg2.DatabaseError("Failed to execute query") from e
-
-
 
 
 if __name__ == "__main__":

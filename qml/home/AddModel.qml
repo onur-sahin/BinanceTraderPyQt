@@ -16,19 +16,24 @@ AddModelForm{
     tf_defaultInterval.onTextChanged:addModelMdl.defaultInterval = tf_defaultInterval.text 
    
     cb_modelType      .onCurrentIndexChanged: {
-          Qt.callLater(()=> {addModelMdl.modelType = cb_modelType.currentText; console.log("currenttext" + cb_modelType.currentText)
-          });
+        Qt.callLater(()=> {
+            addModelMdl.modelType = cb_modelType.currentText;
+            console.log("cb_modelType.currentText: " + cb_modelType.currentText)
+
+        });
     }
 
-
     onVisibleChanged:()=>{
-        if( this.isVisible ){
-            ;
+        if( this.visible ){
+            addModelMdl.update_model_types();
         }
     }
 
     btn_save.onClicked: () => {
-        
+
+        addModelMdl.printModel();
+
+
         // addModelMdl.save_model();
         // addModelMdl.setmodelname();
         
@@ -37,11 +42,10 @@ AddModelForm{
         messageDialog.title = "Model Save Status";
 
         if (result) {
-            
-            messageDialog.messageText = "✅ " + addModelMdl.getModelName() + " model is successfully saved.";
-            
+            messageDialog.messageText = "✅ " + "\'" + addModelMdl.modelName + "\'" + " model is successfully saved.";
+
         } else {
-            messageDialog.messageText = "⛔ " + addModelMdl.getModelName() + " model couldn't saved, Failed!";
+            messageDialog.messageText = "⛔ " + "\'" + addModelMdl.modelName + "\'" + " model couldn't saved, Failed!";
         }
 
         messageDialog.open();
@@ -49,9 +53,6 @@ AddModelForm{
 
     }
 
-    // onModelNameChanged:()=>{
-    //     console.log("aeikmyle");
-    // }
 
     btn_cancel.onClicked: () => {
         this.visible=false
@@ -67,8 +68,6 @@ AddModelForm{
 
     Component{
         id:cellComponent
-
-
 
         Rectangle{
             id: cell_rec
@@ -110,11 +109,10 @@ AddModelForm{
             CheckBox{
                 id:cb_i
                 objectName:"cb_i"
-                x: i_txt.x + i_txt.width-10
-                y: i_txt.y-15
+                x: i_txt.x + i_txt.width-9
+                y: i_txt.y-7
             }
-                
-            
+
 
             CheckBox{
                 id:cb_c
@@ -124,7 +122,7 @@ AddModelForm{
             }
             Text{
                 id: c_txt
-                x: cb_c.x + cb_c.width-10
+                x: cb_c.x + cb_c.width-9
                 y: cell_rec.ry + textElement.height
                 text:"C"
             }
@@ -177,15 +175,27 @@ AddModelForm{
 
     }
 
+    btn_cancel_network.onClicked:()=>{
+        networkWin.visible = false
+    }
+
 
     btn_networks.onClicked: () =>{
 
-        if (cl_network.created){
+        if (cl_network.created && cl_network.modelType === addModelMdl.modelType ){
             networkWin.visible = true;
             return;
         }
 
+        if (cl_network.created && cl_network.modelType !== addModelMdl.modelType ){
+            for( let c of cl_network.children ){
+                c.destroy();
+            }
+        }
+
         cl_network.created=true;
+        cl_network.modelType=addModelMdl.modelType;
+        console.log("created model type: " + addModelMdl.modelType);
 
         let networkNames = addModelMdl.getNetworkNames();
 
@@ -200,9 +210,9 @@ AddModelForm{
             let rowName =  c_rowName.createObject()
             rowName.GridLayout.row        = row_n
             rowName.GridLayout.column     = 0;
-            rowName.GridLayout.rowSpan    = 1
-            rowName.GridLayout.columnSpan = 1
-            rowName.txt_rowName.text      = name_r
+            rowName.GridLayout.rowSpan    = 1;
+            rowName.GridLayout.columnSpan = 1;
+            rowName.txt_rowName.text      = name_r;
 
             cmpnt.gridLayout.children.push(rowName)
 
@@ -221,7 +231,6 @@ AddModelForm{
                 
                 col_n++;
 
-                
             }
             col_n = 0;
             row_n++;

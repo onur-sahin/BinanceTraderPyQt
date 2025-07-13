@@ -35,6 +35,15 @@ MyListViewAccountForm{
     Connections{
         target:listView
 
+        function onNotes_editing_finished(index){
+            var obj = listView.itemAtIndex(index).children[0].children[2].children[0]
+            
+        }
+    }
+
+    Connections{
+        target:listView
+
         function onClicked_mouseArea_third(index){
             var obj = listView.itemAtIndex(index).children[0].children[3].children[0] 
             obj.readOnly = false
@@ -53,6 +62,8 @@ MyListViewAccountForm{
             dlg_keyInput.open();
         }
     }
+
+    
 
 
 
@@ -237,7 +248,7 @@ MyListViewAccountForm{
         
         function onClicked() {
             var index = dlg_keyInput.currentIndex
-            listView.model.decrypteKeys(index, tf_accountPass.text)
+            listView.model.decryptKeys(index, tf_accountPass.text)
             tf_apiKey.text      = listView.model.getItem(index).apiKey
             tf_apiSecret.text   = listView.model.getItem(index).apiSecret
             ma_decrypteKeys.locked = listView.model.getItem(index).isLocked
