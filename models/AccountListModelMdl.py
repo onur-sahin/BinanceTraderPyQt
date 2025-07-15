@@ -120,8 +120,9 @@ class AccountListModelMdl(QAbstractListModel):
                 return idx
         return -1
 
+    @pyqtSlot(int)
+    def removeRow(self, row:int, parent=QModelIndex()):
 
-    def removeRow(self, row, parent=QModelIndex()):
         if row < 0 or row >= len(self.m_items):
             return False
 
@@ -131,32 +132,4 @@ class AccountListModelMdl(QAbstractListModel):
         
         # Custom deletion logic, similar to the C++ version
         return True
-    @pyqtSlot(str, str, result=bool)
-    def testAccount(self, api_key, api_secret):
-        return BinanceDriver.test_binance_credentials(api_key, api_secret)
 
-
-    @pyqtSlot(int, str)
-    def decryptKeys(self, idx, account_pass):
-        item = self.m_items[idx]
-        # Use a CryptoManager or similar approach
-        crypto_manager = CryptoManager()
-        hash_value = HashManager.get_instance().hash(account_pass)
-        crypto_manager.loadKey(hash_value, False)
-        
-        decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
-        decrypted_api_secret = crypto_manager.decrypt(item.cryptedApiSecret)
-        
-        item.apiKey    = decrypted_api_key
-        item.apiSecret = decrypted_api_secret
-        item.isLocked  = not (decrypted_api_key and decrypted_api_secret)
-
-        self.dataChanged.emit(self.index(idx), self.index(idx), [self.IsLockedRole])
-
-    def save_decryptedKeys(self, idx, account_pass, save_to_json=False):
-        self.decryptKeys(idx, account_pass)
-        if save_to_json:
-            item = self.m_items[idx]
-            hashed_text = HashManager.get_instance().hash(account_pass)
-            # Assuming CryptoManager handles encryption
-            item.saveAccountToJsonFile(item.account_name, hashed_text)

@@ -1,7 +1,8 @@
 from PyQt6.QtCore import QObject, pyqtSignal, QVariant
 from PyQt6.QtCore import pyqtProperty, pyqtSlot
-from PyQt6.QtCore import qCritical, qInfo
+from PyQt6.QtCore import qCritical, qInfo, qWarning
 from psycopg2.errors import UniqueViolation
+import threading
 import json
 import os
 from typing import List, Optional
@@ -12,7 +13,7 @@ from HashManager import HashManager
 
 from AccountTypes import AccountTypes
 from Queries import Queries, Q
-from returns.result import Success, Failure
+from returns.result import Result, Success, Failure
 
 from AccountListModelMdl import AccountListModelMdl
 
@@ -34,6 +35,7 @@ class AccountMdl(QObject):
     newAccountCreated           = pyqtSignal(QObject)  # Signal emitted when a new account is created
 
     _accountsList = []  # Static list to hold all accounts
+    _lock = threading.Lock()  # Thread-safe için Lock
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -47,7 +49,7 @@ class AccountMdl(QObject):
         self._isLocked                      = True
         self._cryptedApiKey                 = ""
         self._cryptedApiSecret              = ""
-        self._accountNotes                  = "a"
+        self._accountNotes                  = ""
         self._accountType                   = 0
         self._cryptoManager                 = CryptoManager()
         self._binanceDriver                 = BinanceDriver() # Every model has individual object of BinanceDriver's Class
@@ -189,7 +191,6 @@ class AccountMdl(QObject):
         if isinstance(result, Failure):
             qCritical(f"Failere in update_account_notes(): {str( result.failure() )}")
 
-
     @pyqtSlot()
     def update_account_from_database():
         db = DBManager.get_instance()
@@ -233,15 +234,23 @@ class AccountMdl(QObject):
             return
 
         new_account = self.create_accountMdl_from_data(added_account)
-        new_account.isLocked = True
+        new_account.isLocked  = False
+        new_account.apiKey    = self.apiKey
+        new_account.apiSecret = self.apiSecret
+
+        # self.accountPass = hashed_text
+        self.newAccountCreated.emit(new_account)
 
         if self.rememberAccountPass:
-            self._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
-            self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(hashed_text))
-            new_account.isLocked = False
 
-        self.accountPass = hashed_text
-        self.newAccountCreated.emit(new_account)
+            self._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
+
+            result2 = self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(hashed_text))
+
+            if isinstance(result2, Failure):
+                qCritical(f"{self.accountName} couldn't save to json file: {str(result2.failure())}")
+                return
+            new_account.isLocked = False
 
     @pyqtSlot()
     def test_account(self):
@@ -271,7 +280,7 @@ class AccountMdl(QObject):
 
     @staticmethod
     def get_account_keys_from_json():
-        users_path = os.path.join(os.getcwd(), "..", "share", "users.json")
+        users_path = os.path.join(os.getcwd(), "share", "users.json")
 
         if not os.path.exists(users_path)  :
             return []
@@ -285,45 +294,101 @@ class AccountMdl(QObject):
             return []
 
     @staticmethod
-    def saveAccountToJsonFile(account_name: str, hash_value: str):
-        users_path = os.path.join(os.getcwd(), "..", "share", "users.json")
+    def saveAccountToJsonFile(account_name: str, hash_value: str) -> Result[None, Exception]:
+        
+        base_dir = os.path.join(os.getcwd(), "share")
+        os.makedirs(base_dir, exist_ok=True)
+
+        users_path = os.path.join(base_dir, "users.json")
         backup_path = users_path + ".bak"
 
         try:
-            if os.path.exists(users_path):
+            with AccountMdl._lock:
+                data = []
+
+                # Mevcut dosyayı oku
+                if os.path.exists(users_path):
+                    with open(users_path, "r", encoding="utf-8") as file:
+                        existing_data = json.load(file)
+                        if isinstance(existing_data, dict):
+                            data.append(existing_data)
+                        elif isinstance(existing_data, list):
+                            data.extend(existing_data)
+
+                # Aynı accountName varsa güncelle, yoksa ekle
+                updated = False
+                for acc in data:
+                    if acc.get("accountName") == account_name:
+                        acc["accountPass"] = hash_value
+                        updated = True
+                        break
+
+                if not updated:
+                    data.append({"accountName": account_name, "accountPass": hash_value})
+
+                # Eski dosyayı yedekle
+                if os.path.exists(users_path):
+                    if os.path.exists(backup_path):
+                        os.remove(backup_path)
+                    os.rename(users_path, backup_path)
+
+                # Yeni dosyayı yaz
+                with open(users_path, "w", encoding="utf-8") as file:
+                    json.dump(data, file, ensure_ascii=False, indent=4)
+
+                # Yazma başarılı olduysa yedeği sil
                 if os.path.exists(backup_path):
                     os.remove(backup_path)
-                os.rename(users_path, backup_path)
 
-            with open(users_path, "w") as file:
-                json.dump({"accountName": account_name, "accountPass": hash_value}, file)
+            return Success(None)
+
         except Exception as e:
-            print(f"Failed to save account to JSON: {e}")
+            return Failure(e)
 
     @staticmethod
-    def removeAccountFromJsonFile(account_name: str):
-        users_path = os.path.join(os.getcwd(), "..", "share", "users.json")
-        backup_path = users_path + ".bak"
+    def removeAccountFromJsonFile(account_name: str) -> Result[None, Exception]:
+        base_dir = os.path.join(os.getcwd(), "share")
+        os.makedirs(base_dir, exist_ok=True)
+        users_path = os.path.join(base_dir, "users.json")
 
         try:
-            if os.path.exists(users_path):
-                if os.path.exists(backup_path):
-                    os.remove(backup_path)
-                os.rename(users_path, backup_path)
+            if not os.path.exists(users_path):
+                return Failure(FileNotFoundError(f"File not found: {users_path}"))
 
-            with open(users_path, "r") as file:
+            # Dosyayı oku
+            with open(users_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
 
-            if isinstance(data, list):
-                data = [item for item in data if item.get("accountName") != account_name]
+            # Tek kayıt varsa ve eşleşiyorsa dosyayı tamamen sil
+            if isinstance(data, dict):
+                if data.get("accountName") == account_name:
+                    os.remove(users_path)  # Dosyayı tamamen kaldır
+                    return Success(None)
+                else:
+                    return Failure(ValueError(f"Account '{account_name}' not found"))
 
-            with open(users_path, "w") as file:
-                json.dump(data, file)
+            # Liste ise filtrele
+            elif isinstance(data, list):
+                original_length = len(data)
+                data = [acc for acc in data if acc.get("accountName") != account_name]
+
+                if len(data) == original_length:
+                    return Failure(ValueError(f"Account '{account_name}' not found"))
+
+                # Yeni liste boşsa dosyayı tamamen kaldır
+                if not data:
+                    os.remove(users_path)
+                else:
+                    with open(users_path, "w", encoding="utf-8") as file:
+                        json.dump(data, file, ensure_ascii=False, indent=4)
+
+            return Success(None)
+
         except Exception as e:
-            print(f"Failed to remove account from JSON: {e}")
+            return Failure(e)
 
     @pyqtSlot()
-    def loadFromDatabaseRequested(self):
+    def loadFromDatabaseRequested(self):  
 
         db = DBManager.get_instance()
         query = "SELECT * FROM tbl_accounts"
@@ -357,6 +422,69 @@ class AccountMdl(QObject):
                     break
 
             self.newAccountCreated.emit(new_account)
+
+    @pyqtSlot(int, str)
+    def decryptKeys(self, account_pass:str|None):
+
+        if account_pass == None:
+            account_pass = self.accountPass
+        
+        # Use a CryptoManager or similar approach
+        crypto_manager = CryptoManager()
+        hash_value     = HashManager.get_instance().hash(account_pass)
+        crypto_manager.loadKey(hash_value, False)
+        
+        self.apiKey    = crypto_manager.decrypt(self.cryptedApiKey)
+        self.apiSecret = crypto_manager.decrypt(self.cryptedApiSecret)
+
+        self.isLocked  =  (self.api_key=="") or (self.api_secret=="")
+
+        print(f"item.isLocked: {self.isLocked}")
+
+        # self.dataChanged.emit(self.index(idx), self.index(idx), [self.IsLockedRole])
+    @pyqtSlot(str, str, result=bool)
+    def testAccount(self, api_key, api_secret):
+        return BinanceDriver.test_binance_credentials(api_key, api_secret)
+
+    @pyqtSlot(int, str, bool)
+    def save_decryptedKeys(self, save_to_json=False):
+
+        self.decryptKeys(self.accountPass)
+
+        if save_to_json:
+            hashed_text = HashManager.get_instance().hash(self.accountPass)
+            self._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
+            self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(hashed_text) )
+
+    @pyqtSlot(result=bool)
+    def deleteAccount(self):
+
+        result2 = self.removeAccountFromJsonFile(self.accountName)
+
+        if isinstance(result2, Failure):
+            if isinstance(result2, ValueError):
+                qWarning(f"{str(result2.failure())}")
+            elif isinstance(result2, FileNotFoundError):
+                qWarning(f"str({result2.failure()})")
+            else:
+                qCritical(f"{self.accountName} deleted from database but couldn't remove json file: {str(result2.failure())}")
+
+        result1 = self.deleteAccountFromDatabase()
+
+        if not result1:
+            return False
+
+        return True
+
+    def deleteAccountFromDatabase(self):
+        db = DBManager.get_instance()
+        result = db.execute(Queries.get(Q.DELETE_ACCOUNT), {"account_name":self.accountName})
+
+        if isinstance(result, Failure):
+            qCritical(f"FAILURE! {self.accountName} couldn't delete from database. ERROR: {str(result.failure())}")
+            return False
+        
+        return True
 
     @staticmethod
     def create_accountMdl_from_data(vm:dict):

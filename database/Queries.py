@@ -4,7 +4,8 @@ from enum import Enum
 class Q(str, Enum):
     SELECT_FUNCTION_NAMES       = "SELECT_FUNCTION_NAMES"       
     INSERT_ACCOUNT              = "INSERT_ACCOUNT"              
-    UPDATE_ACCOUNT_NOTES        = "UPDATE_ACCOUNT_NOTES"                
+    UPDATE_ACCOUNT_NOTES        = "UPDATE_ACCOUNT_NOTES"        
+    DELETE_ACCOUNT              = "DELETE_ACCOUNT"              
     SELECT_OPEN_TIME            = "SELECT_OPEN_TIME"            
     SELECT_QUERY                = "SELECT_QUERY"                
     INSERT_MODEL                = "INSERT_MODEL"                
@@ -53,6 +54,11 @@ class Queries:
         Q.UPDATE_ACCOUNT_NOTES: """
             UPDATE tbl_accounts
             SET notes = %(notes)s
+            WHERE account_name=%(account_name)s
+        """,
+
+        Q.DELETE_ACCOUNT:"""
+            DELETE FROM tbl_accounts
             WHERE account_name=%(account_name)s
         """,
 

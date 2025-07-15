@@ -57,9 +57,15 @@ MyListViewAccountForm{
     Connections {
         target: listView
         function onDoubleClicked_mouseArea_lock(index){
-            dlg_keyInput.currentIndex       = index
-            tf_apiKey.pr_cryptedApiKey      = listView.model.getItem(index).cryptedApiKey
-            tf_apiSecret.pr_cryptedApiSecret= listView.model.getItem(index).cryptedApiSecret
+            dlg_keyInput.currentIndex        = index
+            tf_apiKey   .pr_cryptedApiKey    = listView.model.getItem(index).cryptedApiKey
+            tf_apiSecret.pr_cryptedApiSecret = listView.model.getItem(index).cryptedApiSecret
+
+           
+            tf_apiKey      .text       = listView.model.getItem(index).apiKey
+            tf_apiSecret   .text       = listView.model.getItem(index).apiSecret
+            tf_accountPass .text       = listView.model.getItem(index).accountPass
+            ma_decrypteKeys.locked     = listView.model.getItem(index).isLocked
 
             dlg_keyInput.open();
         }
@@ -98,7 +104,7 @@ MyListViewAccountForm{
                     id: tf_apiKey
                     property string pr_cryptedApiKey
                     readOnly:true
-                    text: "None"
+                    text: ""
                     Layout.fillWidth:true
                     background: Rectangle {
                             implicitWidth : 200
@@ -124,7 +130,7 @@ MyListViewAccountForm{
                 TextField {
                     id: tf_apiSecret
                     property string pr_cryptedApiSecret
-                    text:"None"
+                    text:""
                     readOnly:true
                     Layout.fillWidth:true
                     background: Rectangle {
@@ -235,24 +241,19 @@ MyListViewAccountForm{
                     Layout.fillWidth:true
                     text:"cancel"
                 }
-
             }
-
         }
-
-    
-
     }
 
 
     Connections {
         target:ma_decrypteKeys
-        
         function onClicked() {
             var index = dlg_keyInput.currentIndex
-            listView.model.decryptKeys(index, tf_accountPass.text)
-            tf_apiKey.text      = listView.model.getItem(index).apiKey
-            tf_apiSecret.text   = listView.model.getItem(index).apiSecret
+            listView.model.getItem(index).decryptKeys(index, tf_accountPass.text)
+
+            tf_apiKey      .text   = listView.model.getItem(index).apiKey
+            tf_apiSecret   .text   = listView.model.getItem(index).apiSecret
             ma_decrypteKeys.locked = listView.model.getItem(index).isLocked
         }
     }
@@ -262,7 +263,7 @@ MyListViewAccountForm{
 
         function onClicked(){
             var index = dlg_keyInput.currentIndex
-            listView.model.save_decryptedKeys(index, tf_accountPass.text, cb_rememberPass.checked)
+            listView.model.getItem(index).save_decryptedKeys(index, tf_accountPass.text, cb_rememberPass.checked)
         }
     }
 

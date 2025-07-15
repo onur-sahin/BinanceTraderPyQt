@@ -1,850 +1,110 @@
-[07:01:59 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:01:59 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:01:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:01:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:01:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:01:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:01:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:11:11 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:11:11 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:11:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:11:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:11:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:11:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:11:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:12:01 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:01 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:01 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:12:01 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:74:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:12:01 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[07:12:01 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:96:13: Type ModelSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[07:12:01 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml:4:1: Type ModelSelectForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml)
-[07:12:01 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelectForm.ui.qml:5:1: "../tools": no such directory (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelectForm.ui.qml)
-[07:12:21 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:21 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:21 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:12:21 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:74:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:12:21 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[07:12:21 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:96:13: Type ModelSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[07:12:21 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml:18:9: Type AddModel unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml)
-[07:12:21 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:5:1: module "com.binancetrader.ModelMdl" is not installed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:12:59 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:59 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:12:59 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:74:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:96:13: Type ModelSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml:18:9: Type AddModel unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml)
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:7:1: Type AddModelForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:12:59 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModelForm.ui.qml:9:5: Non-existent attached object (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModelForm.ui.qml)
-[07:13:19 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:13:19 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:13:19 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:13:19 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:74:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:13:19 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[07:13:19 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:115:13: Type Management unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[07:13:19 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Management.qml:8:1: Type ManagementForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Management.qml)
-[07:13:19 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ManagementForm.ui.qml:6:1: "../tools": no such directory (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ManagementForm.ui.qml)
-[07:13:44 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:13:44 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:13:44 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:13:44 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:74:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:13:44 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[07:13:44 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:115:13: Type Management unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[07:13:44 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Management.qml:8:1: Type ManagementForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Management.qml)
-[07:13:44 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ManagementForm.ui.qml:116:13: MySeperator is not a type (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ManagementForm.ui.qml)
-[07:15:05 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:15:05 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:15:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:16:54 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:16:54 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:16:54 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:17:13 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:17:13 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:17:14 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:21:07 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:07 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:21:07 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:21:32 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:32 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:32 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:21:32 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:9:21: Invalid property assignment: int expected (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:21:38 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:38 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:21:38 15-03-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[07:21:38 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:9:21: Invalid property assignment: int expected (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[07:22:05 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:22:05 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:22:06 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:22:28 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:22:28 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:22:28 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:23:10 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:23:10 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:10: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[07:23:10 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: ReferenceError: addModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[09:45:48 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:45:48 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[09:45:48 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:9: TypeError: Property 'getModelName' of object ModelMdl(0x60e4fa528d20) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[09:47:34 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:47:34 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:47:35 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[09:47:47 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:190: TypeError: Property 'getNetworkNames' of object ModelMdl(0x5a8d095c1060) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[09:48:11 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:48:11 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[09:48:11 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[11:20:30 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:20:30 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:19: ReferenceError: accountListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:20:30 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:17: ReferenceError: modelListModelMdl is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml)
-[11:22:16 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:22:16 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:22:17 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:19:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:22:17 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:16:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:22:17 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:13:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:22:17 15-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:10:5: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[11:24:30 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:24:30 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:25:19 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:25:19 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:26:17 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:26:17 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:29:13 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:29:13 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:30:06 15-03-2025] [Info    ] log file path: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[11:30:06 15-03-2025] [Debug   ] Yeni log dosyası oluşturuldu: /home/adam/proj/BinanceTraderPyQt/share/logs.log (/home/adam/proj/BinanceTraderPyQt/models/LogManager.py)
-[06:01:51 16-03-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:190: TypeError: Property 'getNetworkNames' of object ModelMdl(0x5e132604ff80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:54:04 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:190: TypeError: Property 'getNetworkNames' of object ModelMdl(0x5d0b3b3cbe50) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:54:31 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:35: TypeError: Property 'save_model' of object ModelMdl(0x5c47c0eec900) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:10:44 03-04-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 150, in printModel
-    "model.modelName       : "{model.modelName       }
-NameError: name 'model' is not defined 
-[23:12:42 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:32: TypeError: Property 'printModel' of object ModelMdl(0x569d286cfe30) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:28 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:32: TypeError: Property 'printModel' of object ModelMdl(0x620ce111e8b0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:25:38 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:38: TypeError: Property 'save_model' of object ModelMdl(0x5c5716efc5d0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:45:53 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:44: TypeError: Property 'getModelName' of object ModelMdl(0x60b60be4d1a0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:47:14 03-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:44: TypeError: Property 'modelName' of object ModelMdl(0x55a032de0ab0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:04:26 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:193: TypeError: Property 'getNetworkNames' of object ModelMdl(0x5e36788b7200) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:59:13 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:199: TypeError: Cannot read property 'length' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:14:03 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:199: TypeError: Cannot read property 'length' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:16:50 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:16:59 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:17:37 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:17:47 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:19:29 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:19:32 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:19:34 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:20:01 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:25: TypeError: Property 'isVisible' of object AddModel_QMLTYPE_69(0x5cc4de318a40) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:20:08 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:25: TypeError: Property 'isVisible' of object AddModel_QMLTYPE_69(0x5cc4de318a40) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:20:10 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:25: TypeError: Property 'isVisible' of object AddModel_QMLTYPE_69(0x5cc4de318a40) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:20:12 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:25: TypeError: Property 'isVisible' of object AddModel_QMLTYPE_69(0x5cc4de318a40) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:20:56 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:00 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:00 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:02 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:04 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:04 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:54 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:58 04-04-2025] [Debug   ] visibitliy:false (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:58 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:21:58 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:22:43 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:22:43 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:22:48 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:22:51 04-04-2025] [Debug   ] visibility changed (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:22:51 04-04-2025] [Debug   ] visibility changed2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:24:25 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:24:29 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:24:32 04-04-2025] [Debug   ] currenttext__pycache__ (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:24:35 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:24:38 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:40:29 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:40:36 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:40:39 04-04-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 132, in getNetworkNames
-    networks_path = os.path.join(os.getcwd(), "neurolNetworks", self.modelType())
-TypeError: 'str' object is not callable 
-[01:41:35 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:41:37 04-04-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 132, in getNetworkNames
-    networks_path = os.path.join(os.getcwd(), "neurolNetworks/" + self.modelType())
-TypeError: 'str' object is not callable 
-[01:41:52 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:41:53 04-04-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 135, in getNetworkNames
-    network_names.remove("__init__.py")
-ValueError: list.remove(x): x not in list 
-[01:53:42 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:53:47 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:55:05 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:56:15 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:57:05 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:57:47 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:58:11 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:58:34 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[01:59:51 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:00:13 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:00:55 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:00:57 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:01:17 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:02:38 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:02:41 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:03:44 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:03:52 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:04:05 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[02:04:06 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:12:10 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:12:25 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:13:21 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:13:23 04-04-2025] [Debug   ] currenttextlstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:14:10 04-04-2025] [Debug   ] currenttextlstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[19:14:14 04-04-2025] [Debug   ] currenttextlstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:47:32 04-04-2025] [Debug   ] currenttext: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:47:36 04-04-2025] [Debug   ] currenttext: lstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:47:39 04-04-2025] [Debug   ] currenttext: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:43:26 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:43:27 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:201: TypeError: Property 'modelType' of object ModelMdl(0x59e067717860) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:44:01 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:44:03 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:44:14 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:44:17 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:189: TypeError: Property 'modelType' of object ModelMdl(0x5e93d5400300) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:44:59 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:45:00 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:45:05 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:45:07 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:196: TypeError: Property 'destroy' of object 0 is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:26 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:28 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:32 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:34 04-04-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:34 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:197: TypeError: Property 'destroy' of object 0 is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:43 04-04-2025] [Debug   ] cb_modelType.currentText: lstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:48 04-04-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:47:48 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:197: TypeError: Property 'destroy' of object 0 is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:14 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:15 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:19 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:21 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:195: TypeError: Property 'children' of object QQuickColumnLayout_QML_61(0x637e250323d0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:24 04-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:195: TypeError: Property 'children' of object QQuickColumnLayout_QML_61(0x637e250323d0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:52 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:53 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:58 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:59 04-04-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:48:59 04-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:33 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:36 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:41 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 4 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 5 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 6 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 7 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 8 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 9 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 10 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 11 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 12 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 13 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 14 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 15 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 16 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 17 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 18 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 19 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 20 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 21 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 22 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 23 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 24 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 25 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 26 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 27 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 28 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 29 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 30 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 31 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 32 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 33 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 34 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 35 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 36 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 37 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 38 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 39 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 40 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 41 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 42 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 43 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 44 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 45 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 46 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 47 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 48 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 49 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 50 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 51 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 52 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 53 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 54 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 55 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 56 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 57 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 58 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 59 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 60 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 61 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 62 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 63 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 64 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 65 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 66 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 67 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 68 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 69 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] 70 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:51:42 04-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:55:22 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:55:24 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:55:27 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:55:28 04-04-2025] [Debug   ] QQuickGridLayout_QML_89(0x632798935080) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[22:55:28 04-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:20 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:21 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:25 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:26 04-04-2025] [Debug   ] QQuickGridLayout_QML_24(0x5ffc09b1c150) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:26 04-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:37 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:39 04-04-2025] [Debug   ] QQuickGridLayout_QML_24(0x5ffc09c4f930) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:14:39 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:19:09 04-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:19:10 04-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:19:14 04-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[23:19:15 04-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:42:07 05-04-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[00:42:07 05-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:75:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[00:42:07 05-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[00:42:07 05-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:96:13: Type ModelSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[00:42:07 05-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml:18:9: Type AddModel unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/ModelSelect.qml)
-[00:42:07 05-04-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml:54:33: Expected token `identifier' (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:42:39 05-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:42:40 05-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:43:19 05-04-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:43:20 05-04-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:48:12 05-04-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[00:48:13 05-04-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[15:06:51 26-06-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[15:07:09 26-06-2025] [Debug   ] cb_modelType.currentText: lstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[15:07:17 26-06-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[15:07:19 26-06-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:06:11 26-06-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:06:14 26-06-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:06:17 26-06-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:07:59 26-06-2025] [Debug   ] cb_modelType.currentText: lstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:08:00 26-06-2025] [Debug   ] created model type: lstm3 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:08:04 26-06-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:08:05 26-06-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[20:09:22 26-06-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:26: TypeError: Property 'loadFromDatabaseRequested' of object AccountMdl(0x5adf039fb580) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[21:27:25 26-06-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:27:34 26-06-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:27:51 26-06-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:26: TypeError: Property 'loadFromDatabaseRequested' of object AccountMdl(0x634f1f2326c0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[21:42:30 26-06-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:42:41 26-06-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[21:43:10 26-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 285, in loadFromDatabaseRequested
-    db = DBManager.getInstance()
-AttributeError: type object 'DBManager' has no attribute 'getInstance'. Did you mean: 'get_instance'? 
-[21:46:06 26-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 287, in loadFromDatabaseRequested
-    result = db.execute_dml_dql_query(query)
-AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
-[16:13:27 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 287, in loadFromDatabaseRequested
-    result = db.execute_dml_dql_query(query)
-AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
-[18:42:02 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 287, in loadFromDatabaseRequested
-    result = db.execute(query)
-TypeError: DBManager.execute() missing 1 required positional argument: 'bindValues' 
-[18:43:45 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 296, in loadFromDatabaseRequested
-    account_name = account.get("account_name")
-AttributeError: 'tuple' object has no attribute 'get' 
-[18:45:15 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 296, in loadFromDatabaseRequested
-    account_name = account.get("account_name")
-AttributeError: 'tuple' object has no attribute 'get' 
-[19:06:03 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 297, in loadFromDatabaseRequested
-    account_name = account.get("account_name")
-AttributeError: 'tuple' object has no attribute 'get' 
-[19:07:32 27-06-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 296, in loadFromDatabaseRequested
-    account_name = account["account_name"]
-TypeError: tuple indices must be integers or slices, not str 
-[15:09:57 12-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[18:23:43 12-07-2025] [Debug   ] New account created: AccountMdl(0x566e7c574300) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:25:44 12-07-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[18:25:44 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:75:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[18:25:44 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[18:25:44 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:77:13: Type AccountSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[18:25:44 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:121:2: Expected token `}' (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:26:06 12-07-2025] [Warning ] QQmlApplicationEngine failed to load component 
-[18:26:06 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml:75:17: Type Home unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/main.qml)
-[18:26:06 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml:3:1: Type HomeForm unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/Home.qml)
-[18:26:06 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml:77:13: Type AccountSelect unavailable (file:///home/adam/proj/BinanceTraderPyQt/qml/home/HomeForm.ui.qml)
-[18:26:06 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:121:2: Expected token `}' (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:26:55 12-07-2025] [Debug   ] New account created: AccountMdl(0x58e0640a8520) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:29:25 12-07-2025] [Debug   ] New account created: AccountMdl(0x5e65e1851800) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:29:25 12-07-2025] [Debug   ] Account name: binance_testnet (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:37:00 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:58: TypeError: Property 'addItem' of object AccountListModelMdl(0x63081a9592e0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:38:41 12-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:39:38 12-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:39:38 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:58: TypeError: Property 'addItem' of object AccountListModelMdl(0x620a20ff6310) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:41:20 12-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:41:20 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:58: TypeError: Property 'addItem' of object AccountListModelMdl(0x579aada949f0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:41:37 12-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:41:37 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:58: TypeError: Property 'addItem' of object AccountListModelMdl(0x5aef69a74960) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:43:01 12-07-2025] [Debug   ] object (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:43:34 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml:57: ReferenceError: dir is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:46:59 12-07-2025] [Debug   ] {"objectName":""} (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:47:40 12-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
-[18:47:46 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:51:55 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:51:55 12-07-2025] [Fatal   ] TypeError: invalid result from AccountListModelMdl.roleNames(), a dict value has type 'str' but 'QByteArray' is expected 
-[18:53:52 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:53:52 12-07-2025] [Fatal   ] TypeError: invalid result from AccountListModelMdl.roleNames(), a dict value has type 'str' but 'QByteArray' is expected 
-[18:54:52 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[18:54:52 12-07-2025] [Fatal   ] TypeError: invalid result from AccountListModelMdl.roleNames(), a dict value has type 'str' but 'QByteArray' is expected 
-[19:00:32 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:00:32 12-07-2025] [Fatal   ] TypeError: invalid result from AccountListModelMdl.roleNames(), a dict value has type 'str' but 'QByteArray' is expected 
-[19:12:14 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:12:14 12-07-2025] [Fatal   ] TypeError: invalid result from AccountListModelMdl.roleNames(), a dict value has type 'str' but 'QByteArray' is expected 
-[19:15:44 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:15:44 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 54, in data
-    return item.account_notes
-AttributeError: 'AccountMdl' object has no attribute 'account_notes'. Did you mean: 'accountNotes'? 
-[19:19:19 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:19:19 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 54, in data
-    return item.account_notes
-AttributeError: 'AccountMdl' object has no attribute 'account_notes'. Did you mean: 'accountNotes'? 
-[19:19:47 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:19:47 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 34, in data
-    return item.account_name
+[16:19:11 15-07-2025] [Debug   ] nhn (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[16:19:11 15-07-2025] [Debug   ] nhn (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[17:11:43 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:11:43 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:11:43 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:11:43 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:25:52 15-07-2025] [Critical] aaa couldn't save to json file: [Errno 2] No such file or directory: '/home/adam/proj/BinanceTraderPyQt/../share/users.json' (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:241, save_account)
+[17:33:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:46 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:46 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[17:33:54 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:265: TypeError: Property 'save_decryptedKeys' of object AccountListModelMdl(0x5b91b1c9e010) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[17:55:16 15-07-2025] [Critical] aaa deleted from database but couldn't remove json file: [Errno 2] No such file or directory: '/home/adam/proj/BinanceTraderPyQt/../share/users.json' (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:387, deleteAccount)
+[18:13:36 15-07-2025] [Critical] ccc deleted from database but couldn't remove json file: Account 'ccc' not found (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:411, deleteAccount)
+[18:14:12 15-07-2025] [Critical] aaa deleted from database but couldn't remove json file: File not found: /home/adam/proj/BinanceTraderPyQt/share/users.json (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:411, deleteAccount)
+[18:30:11 15-07-2025] [Critical] aaa deleted from database but couldn't remove json file: Account 'aaa' not found (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:445, deleteAccount)
+[18:30:15 15-07-2025] [Critical] aaab deleted from database but couldn't remove json file: Account 'aaab' not found (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:445, deleteAccount)
+[18:30:37 15-07-2025] [Critical] kkk deleted from database but couldn't remove json file: File not found: /home/adam/proj/BinanceTraderPyQt/share/users.json (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:445, deleteAccount)
+[18:30:41 15-07-2025] [Critical] kkkl deleted from database but couldn't remove json file: File not found: /home/adam/proj/BinanceTraderPyQt/share/users.json (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:445, deleteAccount)
+[18:34:08 15-07-2025] [Critical] aaa deleted from database but couldn't remove json file: Account 'aaa' not found (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:444, deleteAccount)
+[18:34:59 15-07-2025] [Critical] kkkl deleted from database but couldn't remove json file: File not found: /home/adam/proj/BinanceTraderPyQt/share/users.json (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:444, deleteAccount)
+[18:38:19 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:101:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[18:41:02 15-07-2025] [Fatal   ] TypeError: unable to convert a Python 'dict' object to a C++ 'QObject*' instance 
+[18:42:39 15-07-2025] [Fatal   ] TypeError: unable to convert a Python 'dict' object to a C++ 'QObject*' instance 
+[18:55:01 15-07-2025] [Debug   ]  (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[18:55:25 15-07-2025] [Debug   ]  (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[18:55:33 15-07-2025] [Debug   ] ddd (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[18:55:42 15-07-2025] [Debug   ]  (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:01:36 15-07-2025] [Debug   ] 1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:01:47 15-07-2025] [Debug   ] 1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:01:51 15-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:02:54 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:64: ReferenceError: type is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:03:19 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:03:34 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:05:18 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:05:23 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:08:06 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:08:11 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:08:18 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:08:21 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[19:08:21 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[19:09:08 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:09:19 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:30:36 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:30:36 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:65: TypeError: Value is undefined and could not be converted to an object (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:30:44 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:30:44 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:65: TypeError: Value is undefined and could not be converted to an object (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:31:50 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:32:00 15-07-2025] [Debug   ] string (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[19:46:56 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[19:46:56 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:07:34 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:07:34 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:23:38 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:271: TypeError: Property 'save_decryptedKeys' of object AccountListModelMdl(0x5693834f5aa0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[20:26:12 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:26:12 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:26:12 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 165, in save_decryptedKeys
+    item.saveAccountToJsonFile(item.account_name, hashed_text)
 AttributeError: 'AccountMdl' object has no attribute 'account_name'. Did you mean: 'accountName'? 
-[19:23:17 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:23:17 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 48, in data
-    return item.is_locked
-AttributeError: 'AccountMdl' object has no attribute 'is_locked'. Did you mean: 'isLocked'? 
-[19:24:23 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:24:23 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:24:27 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:24:27 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:24:31 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Property 'getItem' of object AccountListModelMdl(0x5eb33e7efce0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:24:40 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Property 'getItem' of object AccountListModelMdl(0x5eb33e7efce0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:24:41 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Property 'getItem' of object AccountListModelMdl(0x5eb33e7efce0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:25:48 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:25:48 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:26:18 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 100, in getItem
-    "accountTypeString":    item.accountTypeString  
-AttributeError: 'AccountMdl' object has no attribute 'accountTypeString'. Did you mean: 'accountTypeChanged'? 
-[19:30:22 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:30:22 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:30:28 12-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 100, in getItem
-    "accountTypeString":    item.accountTypeString  
-AttributeError: 'AccountMdl' object has no attribute 'accountTypeString'. Did you mean: 'accountTypeChanged'? 
-[19:30:50 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:30:50 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:30:52 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Cannot read property 'cryptedApiKey' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:35:48 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:35:48 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:35:50 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Cannot call method 'cryptedApiKey' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:36:29 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:36:29 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:36:32 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Cannot read property 'cryptedApiKey' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:38:15 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:38:15 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:38:17 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:50: TypeError: Cannot read property 'cryptedApiKey' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:39:50 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:39:50 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:39:51 12-07-2025] [Fatal   ] TypeError: unable to convert a Python 'dict' object to a C++ 'PyQt_PyObject' instance 
-[19:40:25 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:40:25 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:40:27 12-07-2025] [Fatal   ] TypeError: unable to convert a Python 'dict' object to a C++ 'QObject*' instance 
-[19:41:44 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:41:44 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:42:34 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:269: TypeError: Property 'testAccount' of object AccountListModelMdl(0x5bd83047fdb0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:42:38 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bd83047fdb0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:42:38 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bd83047fdb0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:42:40 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bd83047fdb0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:42:40 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bd83047fdb0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:44:13 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:44:13 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:44:18 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:269: TypeError: Property 'testAccount' of object AccountListModelMdl(0x60c1a83fc820) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[19:47:42 12-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:47:42 12-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:37:24 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:37:24 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:37:42 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'bool' object to a C++ 'QString' instance 
-[07:39:24 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:39:24 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:40:08 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:40:08 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:40:13 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bad31d9cf80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[07:40:18 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x5bad31d9cf80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[07:41:42 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:41:42 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:41:47 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:240: TypeError: Property 'decrypteKeys' of object AccountListModelMdl(0x58c15e572140) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[07:45:24 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:45:24 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:45:30 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 132, in decryptKeys
-    decrypted_api_key = crypto_manager.decrypt(item.crypted_api_key)
-AttributeError: 'AccountMdl' object has no attribute 'crypted_api_key'. Did you mean: 'cryptedApiKey'? 
-[07:46:19 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:46:19 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:46:24 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 78, in decrypt
-    unpadded_data = unpadder.update(decryptedData) + unpadder.finalize()
-ValueError: Invalid padding bytes.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 132, in decryptKeys
-    decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 82, in decrypt
-    log.warning(f"Decryption failed: {e}")
-AttributeError: 'QLoggingCategory' object has no attribute 'warning' 
-[07:47:28 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:47:28 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:47:34 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 78, in decrypt
-    unpadded_data = unpadder.update(decryptedData) + unpadder.finalize()
-ValueError: Invalid padding bytes.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 132, in decryptKeys
-    decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 82, in decrypt
-    log.warning(f"Decryption failed: {e}")
-AttributeError: 'QLoggingCategory' object has no attribute 'warning' 
-[07:51:53 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:51:53 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:51:57 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 78, in decrypt
-    unpadded_data = unpadder.update(decryptedData) + unpadder.finalize()
-ValueError: Invalid padding bytes.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 132, in decryptKeys
-    decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 82, in decrypt
-    qWarning(log).write(f"Decryption failed: {e}")
-TypeError: qWarning(msg: Optional[str]): argument 1 has unexpected type 'QLoggingCategory' 
-[07:53:20 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:53:20 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:53:26 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 78, in decrypt
-    unpadded_data = unpadder.update(decryptedData) + unpadder.finalize()
-ValueError: Invalid padding bytes.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 132, in decryptKeys
-    decrypted_api_key = crypto_manager.decrypt(item.cryptedApiKey)
-  File "/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py", line 82, in decrypt
-    qWarning(log).write(f"Decryption failed: {e}")
-TypeError: qWarning(msg: Optional[str]): argument 1 has unexpected type 'QLoggingCategory' 
-[07:57:56 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:57:56 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:58:01 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[07:58:01 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[07:58:44 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:58:44 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[07:58:52 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[07:58:52 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[08:32:46 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[08:32:46 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[08:33:01 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[08:33:01 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:23 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[09:04:23 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[09:04:26 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:26 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:35 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:35 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:47 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:04:47 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:05:02 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:05:02 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:05:05 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:05:05 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[09:11:19 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[09:11:19 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[13:08:08 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[13:08:08 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[13:08:15 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[13:08:15 13-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
-[17:19:43 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: ReferenceError: AccountTypes is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[17:19:55 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: ReferenceError: AccountTypes is not defined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[17:22:49 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: TypeError: Property 'to_string' of object AccountTypes(0x5e84ee516e50) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[17:24:01 13-07-2025] [Warning ] expression for text@file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141 
-[17:24:01 13-07-2025] [Warning ] Too many arguments, ignoring 1 
-[17:24:01 13-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountTypes.py", line 31, in to_string
-    return enum_val.name
-AttributeError: 'AccountTypes' object has no attribute 'name' 
-[17:29:59 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: TypeError: Property 'Type' of object AccountTypes(0x5fae0dc82b30) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:15:12 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:15:47 13-07-2025] [Debug   ] beara (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:15:53 13-07-2025] [Debug   ] beara (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:15:57 13-07-2025] [Debug   ] beara (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:15:58 13-07-2025] [Debug   ] beara (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:16:40 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:18:12 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:19:33 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:20:24 13-07-2025] [Debug   ] BINANCE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:20:29 13-07-2025] [Debug   ] BINANCE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:20:32 13-07-2025] [Debug   ] BINANCE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:21:58 13-07-2025] [Debug   ]  (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:22:04 13-07-2025] [Debug   ]  (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:32:29 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:33:02 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:35:06 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:35:54 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml:37: TypeError: Cannot read property 'BINANCE' of undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:35:54 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: TypeError: Property 'to_string' of object AccountTypes(0x58959d8b0980) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:35:54 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:147: TypeError: Property 'to_string' of object AccountTypes(0x58959d8b0980) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:35:54 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:152: TypeError: Property 'to_string' of object AccountTypes(0x58959d8b0980) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:38:06 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:38:06 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: TypeError: Property 'to_string' of object AccountTypes(0x62e751bfd4a0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:38:06 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:147: TypeError: Property 'to_string' of object AccountTypes(0x62e751bfd4a0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:38:06 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:152: TypeError: Property 'to_string' of object AccountTypes(0x62e751bfd4a0) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:39:28 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:39:28 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:141: TypeError: Property 'to_string' of object AccountTypes(0x5d8a68862640) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:39:28 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:147: TypeError: Property 'to_string' of object AccountTypes(0x5d8a68862640) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:39:28 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml:152: TypeError: Property 'to_string' of object AccountTypes(0x5d8a68862640) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccountForm.ui.qml)
-[18:40:01 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:40:06 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:41:06 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:41:22 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:41:32 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:47:33 13-07-2025] [Fatal   ] TypeError: unable to convert a Python 'PyQt6.QtCore.pyqtProperty' object to a C++ 'int' instance 
-[18:52:13 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:52:20 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[18:52:22 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:00:30 13-07-2025] [Debug   ] CheckBox_QMLTYPE_11(0x565d3419cde0) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:00:38 13-07-2025] [Debug   ] CheckBox_QMLTYPE_11(0x565d3419ab70) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:00:42 13-07-2025] [Debug   ] CheckBox_QMLTYPE_11(0x565d340f5f90) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:00:46 13-07-2025] [Debug   ] CheckBox_QMLTYPE_11(0x565d3419cde0) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:00:48 13-07-2025] [Debug   ] CheckBox_QMLTYPE_11(0x565d3419ab70) (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:28 13-07-2025] [Debug   ] BINANCE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:37 13-07-2025] [Debug   ] CM_FUTURE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:40 13-07-2025] [Debug   ] UM_FUTURE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:42 13-07-2025] [Debug   ] BINANCE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:44 13-07-2025] [Debug   ] CM_FUTURE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:01:45 13-07-2025] [Debug   ] UM_FUTURE (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:03:57 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:04:02 13-07-2025] [Debug   ] 1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:04:04 13-07-2025] [Debug   ] 2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:04:06 13-07-2025] [Debug   ] 0 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddAccount.qml)
-[19:05:32 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:05:32 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:06:23 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:06:23 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:10:14 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:10:14 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:12:54 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:13:22 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:13:41 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[19:13:41 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[19:15:17 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[20:31:31 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[20:31:31 13-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml:87:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccountForm.ui.qml)
-[20:44:51 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[22:29:57 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[22:30:08 13-07-2025] [Debug   ] edited (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[22:30:11 13-07-2025] [Debug   ] edited (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[22:33:16 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[22:33:20 13-07-2025] [Debug   ] eaeae (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[07:45:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:47:16 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[07:47:16 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[09:36:41 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[09:36:54 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 205, in save_account
-    if not insert_result.is_success:
-AttributeError: 'Success' object has no attribute 'is_success' 
-[09:39:58 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 205, in save_account
-    if not insert_result.is_success:
-AttributeError: 'Success' object has no attribute 'is_success' 
-[10:00:53 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 212, in save_account
-    result = db.execute_dml_dql_query(query)
-AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
-[10:01:18 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 208, in save_account
-    print(f"Failed to insert account into database: {insert_result.failure()}")
-  File "/home/adam/miniconda3/envs/binancetraderpyqt/lib/python3.10/site-packages/returns/result.py", line 459, in failure
-    raise UnwrapFailedError(self)
-returns.primitives.exceptions.UnwrapFailedError 
-[10:01:55 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 208, in save_account
-    print(f"Failed to insert account into database: {insert_result.failure()}")
-  File "/home/adam/miniconda3/envs/binancetraderpyqt/lib/python3.10/site-packages/returns/result.py", line 459, in failure
-    raise UnwrapFailedError(self)
-returns.primitives.exceptions.UnwrapFailedError 
-[10:13:45 15-07-2025] [Fatal   ] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
-LINE 4:         seai
-                ^
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
-[10:16:09 15-07-2025] [Fatal   ] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
-LINE 4:         seai
-                ^
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
-[10:16:54 15-07-2025] [Critical] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
-LINE 4:         seai
-                ^
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
-[10:36:43 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[10:36:59 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 212, in save_account
-    result = db.execute_dml_dql_query(query)
-AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
-[11:15:59 15-07-2025] [Info    ] account_name=uie : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[11:17:06 15-07-2025] [Info    ] account_name=uie : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[11:19:07 15-07-2025] [Info    ] account_name=123 : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[12:13:40 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:13:40 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:13:54 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
-    new_account = self.create_accountMdl_from_data(added_account)
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
-    account.accountName      = vm.get("account_name" , "")
-AttributeError: 'list' object has no attribute 'get' 
-[12:15:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:15:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:15:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:16:19 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
-    new_account = self.create_accountMdl_from_data(added_account)
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
-    account.accountName      = vm.get("account_name" , "")
-AttributeError: 'list' object has no attribute 'get' 
-[12:17:32 15-07-2025] [Fatal   ] Traceback (most recent call last):
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
-    new_account = self.create_accountMdl_from_data(added_account)
-  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
-    account.accountName      = vm.get("account_name" , "")
-AttributeError: 'tuple' object has no attribute 'get' 
-[12:20:51 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:57 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:20:57 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:22:33 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:11 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:13 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:13 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[12:23:14 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
-[13:03:59 15-07-2025] [Critical] Failed to insert account into database: Failed to execute query: duplicate key value violates unique constraint "tbl_accounts_pkey"
-DETAIL:  Key (account_name)=(123) already exists.
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:218, save_account)
-[13:24:52 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[13:25:35 15-07-2025] [Critical] Failed to load accounts from database: Failed to execute select return dict query: current transaction is aborted, commands ignored until end of transaction block
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:329, loadFromDatabaseRequested)
-[13:30:08 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[13:30:14 15-07-2025] [Critical] Failed to load accounts from database: current transaction is aborted, commands ignored until end of transaction block
- (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:329, loadFromDatabaseRequested)
-[13:36:53 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
-[15:16:51 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x580f42e75c10) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[15:16:54 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x580f42e75c10) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[15:17:41 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x57f296ba2d80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
-[15:17:45 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x57f296ba2d80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[20:27:03 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:27:03 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:27:03 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:27:03 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:37:42 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:37:42 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:37:42 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:37:42 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:38:07 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:38:07 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:38:07 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:38:07 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:54:13 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:54:13 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:54:13 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:54:13 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:56:14 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:56:14 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:56:14 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:56:14 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:01 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:01 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:01 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:01 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:08 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountListModelMdl.py", line 165, in save_decryptedKeys
+    item.cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
+AttributeError: 'AccountMdl' object has no attribute 'cryptoManager'. Did you mean: '_cryptoManager'? 
+[20:57:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:37 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[20:57:37 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:30:45 15-07-2025] [Warning ] Decryption failed: The length of the provided data is not a multiple of the block length. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:30:45 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:30:45 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:30:45 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:33:08 15-07-2025] [Warning ] Decryption failed: The length of the provided data is not a multiple of the block length. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:33:08 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:33:08 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:33:08 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:34:21 15-07-2025] [Warning ] Decryption failed: The length of the provided data is not a multiple of the block length. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:34:21 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:34:21 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:34:21 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:42:26 15-07-2025] [Warning ] Decryption failed: The length of the provided data is not a multiple of the block length. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:42:26 15-07-2025] [Warning ] Key string must contain at least 48 bytes (32-byte key + 16-byte IV). (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:42:26 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)
+[21:42:26 15-07-2025] [Warning ] Decryption failed: Invalid padding bytes. (/home/adam/proj/BinanceTraderPyQt/models/CryptoManager.py)

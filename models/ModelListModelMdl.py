@@ -55,21 +55,21 @@ class ModelListModelMdl(QAbstractListModel):
         else:
             return None
 
-def roleNames(self):
-    return {
-        self.ModelNameRole: QByteArray(b"modelName"),
-        self.ApiKeyRole: QByteArray(b"apiKey"),
-        self.ApiSecretRole: QByteArray(b"apiSecret"),
-        self.RealAccountRole: QByteArray(b"realAccount"),
-        self.TestResultRole: QByteArray(b"testResult"),
-        self.AccountPassRole: QByteArray(b"accountPass"),
-        self.RememberAccountPassRole: QByteArray(b"rememberAccountPass"),
-        self.IsLockedRole: QByteArray(b"isLocked"),
-        self.CryptedApiKeyRole: QByteArray(b"cryptedApiKey"),
-        self.CryptedApiSecretRole: QByteArray(b"cryptedApiSecret"),
-        self.AccountNotesRole: QByteArray(b"accountNotes"),
-        self.AccountTypeStringRole: QByteArray(b"accountTypeString"),
-    }
+    def roleNames(self):
+        return {
+            self.ModelNameRole: QByteArray(b"modelName"),
+            self.ApiKeyRole: QByteArray(b"apiKey"),
+            self.ApiSecretRole: QByteArray(b"apiSecret"),
+            self.RealAccountRole: QByteArray(b"realAccount"),
+            self.TestResultRole: QByteArray(b"testResult"),
+            self.AccountPassRole: QByteArray(b"accountPass"),
+            self.RememberAccountPassRole: QByteArray(b"rememberAccountPass"),
+            self.IsLockedRole: QByteArray(b"isLocked"),
+            self.CryptedApiKeyRole: QByteArray(b"cryptedApiKey"),
+            self.CryptedApiSecretRole: QByteArray(b"cryptedApiSecret"),
+            self.AccountNotesRole: QByteArray(b"accountNotes"),
+            self.AccountTypeStringRole: QByteArray(b"accountTypeString"),
+        }
 
     @pyqtSlot()
     def addItem(self, item):

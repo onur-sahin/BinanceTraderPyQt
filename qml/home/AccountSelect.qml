@@ -47,6 +47,7 @@ AccountSelectForm{
         // console.log("Methods of object:", methods);
 
         md_accountDelete.accountName = myListViewAccount.model.getItem(currentIndex).accountName
+        md_accountDelete.index       = currentIndex
         md_accountDelete.open();
     }
 
@@ -67,6 +68,7 @@ AccountSelectForm{
         title:"☢️⚠️Account Delete Warning!⚠️☢️"
         
         property string accountName : "accountName";
+        property int index       : -1;
 
         background: Rectangle{
                         anchors.fill:parent
@@ -106,7 +108,15 @@ AccountSelectForm{
         }
 
         onAccepted:{
-            myListViewAccount.model.removeRow(myListViewAccount.currentIndex)
+            // index = myListViewAccou
+
+            var obj = myListViewAccount.model.getItem(index)
+            var result = obj.deleteAccount()
+
+            if (result){
+                var result2 = myListViewAccount.model.removeRow(index)
+            }
+
         }
 
 
