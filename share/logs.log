@@ -748,3 +748,103 @@ AttributeError: 'AccountTypes' object has no attribute 'name'
 [22:30:11 13-07-2025] [Debug   ] edited (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
 [22:33:16 13-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
 [22:33:20 13-07-2025] [Debug   ] eaeae (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[07:45:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[07:47:16 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[07:47:16 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[09:36:41 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[09:36:54 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 205, in save_account
+    if not insert_result.is_success:
+AttributeError: 'Success' object has no attribute 'is_success' 
+[09:39:58 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 205, in save_account
+    if not insert_result.is_success:
+AttributeError: 'Success' object has no attribute 'is_success' 
+[10:00:53 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 212, in save_account
+    result = db.execute_dml_dql_query(query)
+AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
+[10:01:18 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 208, in save_account
+    print(f"Failed to insert account into database: {insert_result.failure()}")
+  File "/home/adam/miniconda3/envs/binancetraderpyqt/lib/python3.10/site-packages/returns/result.py", line 459, in failure
+    raise UnwrapFailedError(self)
+returns.primitives.exceptions.UnwrapFailedError 
+[10:01:55 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 208, in save_account
+    print(f"Failed to insert account into database: {insert_result.failure()}")
+  File "/home/adam/miniconda3/envs/binancetraderpyqt/lib/python3.10/site-packages/returns/result.py", line 459, in failure
+    raise UnwrapFailedError(self)
+returns.primitives.exceptions.UnwrapFailedError 
+[10:13:45 15-07-2025] [Fatal   ] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
+LINE 4:         seai
+                ^
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
+[10:16:09 15-07-2025] [Fatal   ] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
+LINE 4:         seai
+                ^
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
+[10:16:54 15-07-2025] [Critical] Failed to insert account into database: Failed to execute query: syntax error at or near "seai"
+LINE 4:         seai
+                ^
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:208, save_account)
+[10:36:43 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[10:36:59 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 212, in save_account
+    result = db.execute_dml_dql_query(query)
+AttributeError: 'DBManager' object has no attribute 'execute_dml_dql_query' 
+[11:15:59 15-07-2025] [Info    ] account_name=uie : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[11:17:06 15-07-2025] [Info    ] account_name=uie : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[11:19:07 15-07-2025] [Info    ] account_name=123 : Account already found in database (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[12:13:40 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:13:40 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:13:54 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
+    new_account = self.create_accountMdl_from_data(added_account)
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
+    account.accountName      = vm.get("account_name" , "")
+AttributeError: 'list' object has no attribute 'get' 
+[12:15:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:15:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:15:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:16:19 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
+    new_account = self.create_accountMdl_from_data(added_account)
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
+    account.accountName      = vm.get("account_name" , "")
+AttributeError: 'list' object has no attribute 'get' 
+[12:17:32 15-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 223, in save_account
+    new_account = self.create_accountMdl_from_data(added_account)
+  File "/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py", line 349, in create_accountMdl_from_data
+    account.accountName      = vm.get("account_name" , "")
+AttributeError: 'tuple' object has no attribute 'get' 
+[12:20:51 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:55 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:56 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:57 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:20:57 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:22:33 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:11 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:12 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:13 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:13 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[12:23:14 15-07-2025] [Debug   ] undefined (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AccountSelect.qml)
+[13:03:59 15-07-2025] [Critical] Failed to insert account into database: Failed to execute query: duplicate key value violates unique constraint "tbl_accounts_pkey"
+DETAIL:  Key (account_name)=(123) already exists.
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:218, save_account)
+[13:24:52 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[13:25:35 15-07-2025] [Critical] Failed to load accounts from database: Failed to execute select return dict query: current transaction is aborted, commands ignored until end of transaction block
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:329, loadFromDatabaseRequested)
+[13:30:08 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[13:30:14 15-07-2025] [Critical] Failed to load accounts from database: current transaction is aborted, commands ignored until end of transaction block
+ (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py:329, loadFromDatabaseRequested)
+[13:36:53 15-07-2025] [Info    ] account_name: 123 already exists in database, please select another name! (/home/adam/proj/BinanceTraderPyQt/models/AccountMdl.py)
+[15:16:51 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x580f42e75c10) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[15:16:54 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x580f42e75c10) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[15:17:41 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x57f296ba2d80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)
+[15:17:45 15-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml:40: TypeError: Property 'update_account_notes' of object AccountListModelMdl(0x57f296ba2d80) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewAccount.qml)

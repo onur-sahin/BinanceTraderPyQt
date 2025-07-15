@@ -1,5 +1,7 @@
 from PyQt6.QtCore import QObject, pyqtSignal, QVariant
 from PyQt6.QtCore import pyqtProperty, pyqtSlot
+from PyQt6.QtCore import qCritical, qInfo
+from psycopg2.errors import UniqueViolation
 import json
 import os
 from typing import List, Optional
@@ -9,6 +11,10 @@ from CryptoManager import CryptoManager
 from HashManager import HashManager
 
 from AccountTypes import AccountTypes
+from Queries import Queries, Q
+from returns.result import Success, Failure
+
+from AccountListModelMdl import AccountListModelMdl
 
 
 class AccountMdl(QObject):
@@ -171,33 +177,59 @@ class AccountMdl(QObject):
             self._accountType = account_type
             self.accountTypeChanged.emit()
 
+    @pyqtSlot(str)
+    def update_account_notes(self, notes:str):
+
+        db = DBManager.get_instance()
+
+        query = Queries.get(Q.UPDATE_ACCOUNT_NOTES)
+
+        result = db.execute(query, {"notes":notes, "account_name":self.accountName})
+
+        if isinstance(result, Failure):
+            qCritical(f"Failere in update_account_notes(): {str( result.failure() )}")
+
+
+    @pyqtSlot()
+    def update_account_from_database():
+        db = DBManager.get_instance()
+
     @pyqtSlot()
     def save_account(self):
-        db = DBManager.getInstance()
+        db = DBManager.get_instance()
         hashed_text = HashManager.get_instance().hash(self.accountPass)
         self._cryptoManager.loadKey(hashed_text, False)
 
         bind_values = {}
-        bind_values[":account_name"] = self.accountName
-        bind_values[":real_account"] = self.realAccount
-        bind_values[":account_type"] = self.accountType
-        bind_values[":api_key"     ] = self._cryptoManager.encrypt(self.apiKey)
-        bind_values[":api_secret"  ] = self._cryptoManager.encrypt(self.apiSecret)
+        bind_values["account_name"] = self.accountName
+        bind_values["real_account"] = self.realAccount
+        bind_values["account_type"] = self.accountType
+        bind_values["api_key"     ] = self._cryptoManager.encrypt(self.apiKey)
+        bind_values["api_secret"  ] = self._cryptoManager.encrypt(self.apiSecret)
+        bind_values["notes"       ] = ""
 
-        insert_result = db.execute_dml_dql_query("INSERT INTO tbl_accounts VALUES (:account_name, :real_account, :account_type, :api_key, :api_secret)", bind_values)
-        if not insert_result:
-            print("Failed to insert account into database")
+
+        insert_result = db.execute(Queries.get(Q.INSERT_ACCOUNT), bind_values)
+        
+        if isinstance(insert_result, Failure):
+
+            if isinstance(insert_result.failure(), UniqueViolation):
+                qInfo(f"account_name: {self.accountName} already exists in database, please select another name!")
+                return
+            
+            qCritical(f"Failed to insert account into database: {str( insert_result.failure() )}")
             return
 
         query = f"SELECT * FROM tbl_accounts WHERE account_name='{self.accountName}'"
-        result = db.execute_dml_dql_query(query)
-        if not result:
-            print("Failed to fetch account from database")
+        result = db.execute_select_return_dict(query)
+        if isinstance(result, Failure):
+            qCritical(f"Failed to fetch account from database: {str( result.failure() )}")
             return
 
-        added_account = result
-        if not added_account:
-            print("Account not found in database")
+        added_account = result.unwrap()[0]
+
+        if len(added_account) == 0:
+            qCritical(f"account_name={self.accountName} : Account not found in database")
             return
 
         new_account = self.create_accountMdl_from_data(added_account)
@@ -292,19 +324,23 @@ class AccountMdl(QObject):
 
     @pyqtSlot()
     def loadFromDatabaseRequested(self):
+
         db = DBManager.get_instance()
         query = "SELECT * FROM tbl_accounts"
         result = db.execute_select_return_dict(query)
-        if not result:
-            print("Failed to load accounts from database")
+        if isinstance(result, Failure):
+            qCritical(f"Failed to load accounts from database: {str( result.failure() )}")
             return
 
-        accounts_list = result
-        account_key_list = self.get_account_keys_from_json() 
+        accounts_list = result.unwrap()
+        account_key_list = self.get_account_keys_from_json()
 
         for account in accounts_list:
             account_name = account.get("account_name")
-            print(account_name)
+
+            if AccountListModelMdl.findIndexByAccountName(account_name) != -1:
+                continue
+
             if any(acc.accountName == account_name for acc in self._accountsList):
                 continue
 

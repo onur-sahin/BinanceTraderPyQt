@@ -54,7 +54,7 @@ AccountSelectForm{
     Connections {
         target: addAccountMdl
         function onNewAccountCreated(account) {
-            console.log(accountListModelMdl.addItem(account))
+            accountListModelMdl.addItem(account)
 
         }
     }

@@ -1,6 +1,7 @@
 import psycopg2
 import threading
 from psycopg2.extensions import connection
+from returns.result import Result, Success, Failure
 
 class DBManager:
     _instance = None
@@ -13,7 +14,7 @@ class DBManager:
         if cls._instance is None:
             raise Exception("DBManager instance has not been created yet.")
         return cls._instance
-
+ 
 
     def __new__(cls, dbname: str=None, user: str=None, password: str=None, host: str=None, port: str=None):
 
@@ -29,12 +30,12 @@ class DBManager:
         """Initialize sadece bir kez yapılmalı"""
         if not hasattr(self, '_initialized'):
             self._initialized = True
-            self.dbname   = dbname
-            self.user     = user
-            self.password = password
-            self.host     = host
-            self.port     = port
-            self.conn     = None
+            self.dbname       = dbname
+            self.user         = user
+            self.password     = password
+            self.host         = host
+            self.port         = port
+            self.conn         = None
 
 
     def connect(self, dbname: str, user: str, password: str, host: str, port: str) -> None:
@@ -86,7 +87,7 @@ class DBManager:
         self.connect(dbname, user,password, host, port)
 
 
-    def execute_select_return_list( self, query: str, bindValues:dict|None = None ) -> list:
+    def execute_select_return_list( self, query: str, bindValues:dict|None = None ) -> Result[list, Exception]:
 
         result = list()
 
@@ -103,13 +104,19 @@ class DBManager:
             cursor.close()
 
         except Exception as e:
-            raise psycopg2.DatabaseError("Failed to execute select query: ") from e
 
-        print(result)
+            if conn:
+                conn.rollback()
 
-        return result
+            return Failure(e)
+        
+        finally:
+            if cursor:
+                cursor.close()
+
+        return Success(result)
     
-    def execute_select_return_dict( self, query: str, bindValues:dict|None = None ) -> list:
+    def execute_select_return_dict( self, query: str, bindValues:dict|None = None ) -> Result[list, Exception]:
 
         result = list()
 
@@ -131,12 +138,20 @@ class DBManager:
             cursor.close()
 
         except Exception as e:
-            raise psycopg2.DatabaseError("Failed to execute select query: ") from e
 
-        return result
+            if conn:
+                conn.rollback()
+
+            return Failure(e)
+        
+        finally:
+            if cursor:
+                cursor.close()
+
+        return Success(result)
 
 
-    def execute(self, query:str, bindValues:dict|None = None) -> None:
+    def execute(self, query:str, bindValues:dict|None = None) -> Result[None, Exception]:
 
         try:
             conn   = self.get_connection()
@@ -147,10 +162,23 @@ class DBManager:
             else:
                 cursor.execute(query, bindValues)
 
-            cursor.close()    
+            conn.commit()
+
+            cursor.close()
+
+            return Success(None)
 
         except Exception as e:
-            raise psycopg2.DatabaseError("Failed to execute query") from e
+
+            if conn:
+                conn.rollback()
+
+            return Failure( e )
+        
+        finally:
+            if cursor:
+                cursor.close()
+
 
 
 if __name__ == "__main__":

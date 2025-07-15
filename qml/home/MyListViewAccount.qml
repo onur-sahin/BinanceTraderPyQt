@@ -37,6 +37,8 @@ MyListViewAccountForm{
 
         function onNotes_editing_finished(index){
             var obj = listView.itemAtIndex(index).children[0].children[2].children[0]
+            listView.model.getItem(index).update_account_notes(obj.text)
+            obj.focus = false
             
         }
     }

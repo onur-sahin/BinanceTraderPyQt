@@ -20,9 +20,12 @@ class AccountListModelMdl(QAbstractListModel):
     AccountNotesRole = Qt.ItemDataRole.UserRole + 11
     AccountTypeStringRole = Qt.ItemDataRole.UserRole + 12
 
+    m_items = []  # This would hold your AccountMdl objects or their equivalent
+
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.m_items = []  # This would hold your AccountMdl objects or their equivalent
+        self.m_items = AccountListModelMdl.m_items
+        
 
     def rowCount(self, parent=QModelIndex()):
         return len(self.m_items)
@@ -105,6 +108,18 @@ class AccountListModelMdl(QAbstractListModel):
         #     "accountTypeString":    item.accountType  
         # }
         # return account_data
+    @classmethod
+    @pyqtSlot(str, result=int)
+    def findIndexByAccountName(cls, account_name: str) -> int:
+        """
+        Verilen account_name'e sahip item'ın index'ini döndürür.
+        Yoksa -1 döndürür.
+        """
+        for idx, item in enumerate(cls.m_items):
+            if getattr(item, "accountName", None) == account_name:
+                return idx
+        return -1
+
 
     def removeRow(self, row, parent=QModelIndex()):
         if row < 0 or row >= len(self.m_items):
