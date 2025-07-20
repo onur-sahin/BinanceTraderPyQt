@@ -26,8 +26,8 @@ ListView {
 
         Row {
             anchors.centerIn:parent
-            width: parent.width -20
-            height: parent.height -20
+            width: parent.width - 20
+            height: parent.height - 20
             spacing: 0
 
             Rectangle {
@@ -36,11 +36,13 @@ ListView {
             
                 Text{
                     id:txt
-                    text: model.isLocked ? "🔐" : "🔓"
+                    text: accountObj.isLocked ? "🔐" : "🔓"
+                    
                     font.pixelSize: 30
                     anchors.centerIn:parent
                     width:parent.width
-  
+
+ 
                 }
                 color:"transparent"
 
@@ -62,7 +64,7 @@ ListView {
                     id: firstField
                     anchors.centerIn:parent
                     width: parent.width
-                    text: model.accountName
+                    text: accountObj.accountName
                     readOnly: true
                     focus: true  // Çift tıklanınca odak alması için
                 }
@@ -85,7 +87,7 @@ ListView {
                     id: secondField
                     anchors.centerIn:parent
                     width: parent.width
-                    text:  model.accountNotes
+                    text:  accountObj.accountNotes
                     readOnly: true
                     focus: true
                     onEditingFinished: notes_editing_finished(index)

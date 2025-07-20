@@ -246,15 +246,22 @@ MyListViewAccountForm{
     }
 
 
+
+
     Connections {
         target:ma_decrypteKeys
         function onClicked() {
             var index = dlg_keyInput.currentIndex
-            listView.model.getItem(index).decryptKeys(index, tf_accountPass.text)
+
+            listView.model.getItem(index).decryptKeys(tf_accountPass.text)
 
             tf_apiKey      .text   = listView.model.getItem(index).apiKey
             tf_apiSecret   .text   = listView.model.getItem(index).apiSecret
             ma_decrypteKeys.locked = listView.model.getItem(index).isLocked
+            var obj = listView.itemAtIndex(index).children[0].children[3].children[0] 
+
+            listView.forceLayout()
+
         }
     }
 
@@ -262,8 +269,12 @@ MyListViewAccountForm{
         target: btn_lock_save
 
         function onClicked(){
+
             var index = dlg_keyInput.currentIndex
-            listView.model.getItem(index).save_decryptedKeys(index, tf_accountPass.text, cb_rememberPass.checked)
+            listView.model.getItem(index).decryptKeys(tf_accountPass.text)
+            listView.model.getItem(index).save_decryptedKeys(tf_accountPass.text, true)
+
+            listView.forceLayout()
         }
     }
 

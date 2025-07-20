@@ -9,7 +9,7 @@ class CryptoManager:
         self.m_key = None
         self.m_iv = None
 
-    def loadKey(self, keySource: str, fromFile: bool):
+    def loadKey(self, keySource: str, fromFile: bool=False):
         if fromFile:
             self.loadKeyFromFile(keySource)
         else:

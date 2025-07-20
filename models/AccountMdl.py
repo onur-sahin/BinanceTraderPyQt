@@ -15,8 +15,6 @@ from AccountTypes import AccountTypes
 from Queries import Queries, Q
 from returns.result import Result, Success, Failure
 
-from AccountListModelMdl import AccountListModelMdl
-
 
 class AccountMdl(QObject):
     accountNameChanged          = pyqtSignal()
@@ -37,6 +35,7 @@ class AccountMdl(QObject):
     _accountsList = []  # Static list to hold all accounts
     _lock = threading.Lock()  # Thread-safe için Lock
 
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self._accountName                   = ""
@@ -45,6 +44,8 @@ class AccountMdl(QObject):
         self._realAccount                   = True
         self._testResult                    = ""
         self._accountPass                   = ""
+        self._hashedAccountPass             = ""
+        self._cryptedHashedAccountPass      = ""
         self._rememberAccountPass           = False
         self._isLocked                      = True
         self._cryptedApiKey                 = ""
@@ -53,8 +54,11 @@ class AccountMdl(QObject):
         self._accountType                   = 0
         self._cryptoManager                 = CryptoManager()
         self._binanceDriver                 = BinanceDriver() # Every model has individual object of BinanceDriver's Class
+        self._accountPassKey                = "ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ"
 
         self.updatedDecryptedKeys.connect(self.onUpdatedDecryptedKeys)
+
+
 
     @pyqtProperty(str, notify=accountNameChanged)
     def accountName(self):
@@ -198,8 +202,8 @@ class AccountMdl(QObject):
     @pyqtSlot()
     def save_account(self):
         db = DBManager.get_instance()
-        hashed_text = HashManager.get_instance().hash(self.accountPass)
-        self._cryptoManager.loadKey(hashed_text, False)
+        self._hashedAccountPass = HashManager.get_instance().hash(self.accountPass)
+        self._cryptoManager.loadKey(self._hashedAccountPass, False)
 
         bind_values = {}
         bind_values["account_name"] = self.accountName
@@ -233,23 +237,24 @@ class AccountMdl(QObject):
             qCritical(f"account_name={self.accountName} : Account not found in database")
             return
 
-        new_account = self.create_accountMdl_from_data(added_account)
+        new_account           = self.create_accountMdl_from_data(added_account)
         new_account.isLocked  = False
         new_account.apiKey    = self.apiKey
         new_account.apiSecret = self.apiSecret
 
-        # self.accountPass = hashed_text
+
         self.newAccountCreated.emit(new_account)
 
         if self.rememberAccountPass:
 
             self._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
 
-            result2 = self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(hashed_text))
+            result2 = self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(self._hashedAccountPass))
 
             if isinstance(result2, Failure):
                 qCritical(f"{self.accountName} couldn't save to json file: {str(result2.failure())}")
                 return
+
             new_account.isLocked = False
 
     @pyqtSlot()
@@ -277,21 +282,6 @@ class AccountMdl(QObject):
         #     return False
         # self.testResult = "Account is valid"
         return True
-
-    @staticmethod
-    def get_account_keys_from_json():
-        users_path = os.path.join(os.getcwd(), "share", "users.json")
-
-        if not os.path.exists(users_path)  :
-            return []
-
-        try:
-            with open(users_path, "r") as file:
-                data = json.load(file)
-                return data
-        except Exception as e:
-            print(f"Failed to read users.json: {e}")
-            return []
 
     @staticmethod
     def saveAccountToJsonFile(account_name: str, hash_value: str) -> Result[None, Exception]:
@@ -387,74 +377,39 @@ class AccountMdl(QObject):
         except Exception as e:
             return Failure(e)
 
-    @pyqtSlot()
-    def loadFromDatabaseRequested(self):  
+    def decrypt_cryptedHashedAccountPass(self):
+        self._cryptoManager.loadKey(self._accountPassKey)
+        self._hashedAccountPass = self._cryptoManager.decrypt(self._cryptedHashedAccountPass)
 
-        db = DBManager.get_instance()
-        query = "SELECT * FROM tbl_accounts"
-        result = db.execute_select_return_dict(query)
-        if isinstance(result, Failure):
-            qCritical(f"Failed to load accounts from database: {str( result.failure() )}")
-            return
+    @pyqtSlot(str)
+    def decryptKeys(self, accountPass:str=None):
 
-        accounts_list = result.unwrap()
-        account_key_list = self.get_account_keys_from_json()
+        if accountPass != None:
+            self._accountPass = accountPass
+            self._hashedAccountPass = HashManager.get_instance().hash(self._accountPass)
 
-        for account in accounts_list:
-            account_name = account.get("account_name")
+        self._cryptoManager.loadKey(self._hashedAccountPass)
 
-            if AccountListModelMdl.findIndexByAccountName(account_name) != -1:
-                continue
+        self.apiKey    = self._cryptoManager.decrypt(self.cryptedApiKey)
+        self.apiSecret = self._cryptoManager.decrypt(self.cryptedApiSecret)
+        self.isLocked  = (self.apiKey=="") or (self.apiSecret=="")
 
-            if any(acc.accountName == account_name for acc in self._accountsList):
-                continue
-
-            new_account = self.create_accountMdl_from_data(account)
-            for key in account_key_list:
-                if key.get("accountName") == account_name:
-                    account_pass = key.get("accountPass")
-                    new_account._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
-                    hash_value = new_account._cryptoManager.decrypt(account_pass)
-                    new_account._cryptoManager.loadKey(hash_value, False)
-                    new_account.apiKey = new_account._cryptoManager.decrypt(new_account.cryptedApiKey)
-                    new_account.apiSecret = new_account._cryptoManager.decrypt(new_account.cryptedApiSecret)
-                    new_account.isLocked = False
-                    break
-
-            self.newAccountCreated.emit(new_account)
-
-    @pyqtSlot(int, str)
-    def decryptKeys(self, account_pass:str|None):
-
-        if account_pass == None:
-            account_pass = self.accountPass
-        
-        # Use a CryptoManager or similar approach
-        crypto_manager = CryptoManager()
-        hash_value     = HashManager.get_instance().hash(account_pass)
-        crypto_manager.loadKey(hash_value, False)
-        
-        self.apiKey    = crypto_manager.decrypt(self.cryptedApiKey)
-        self.apiSecret = crypto_manager.decrypt(self.cryptedApiSecret)
-
-        self.isLocked  =  (self.api_key=="") or (self.api_secret=="")
-
-        print(f"item.isLocked: {self.isLocked}")
 
         # self.dataChanged.emit(self.index(idx), self.index(idx), [self.IsLockedRole])
+
     @pyqtSlot(str, str, result=bool)
     def testAccount(self, api_key, api_secret):
         return BinanceDriver.test_binance_credentials(api_key, api_secret)
 
-    @pyqtSlot(int, str, bool)
-    def save_decryptedKeys(self, save_to_json=False):
+    @pyqtSlot(str, bool)
+    def save_decryptedKeys(self, save_to_json=False) :
 
         self.decryptKeys(self.accountPass)
 
         if save_to_json:
             hashed_text = HashManager.get_instance().hash(self.accountPass)
-            self._cryptoManager.loadKey("ZzAXPpV2K4k6e7mShY11gsyMK9EBV1ZzQv9rNp0M5roJ9j9kaml2M4Ax6M73ALmZ", False)
-            self.saveAccountToJsonFile(self.accountName, self._cryptoManager.encrypt(hashed_text) )
+            self._cryptoManager.loadKey(self._accountPassKey)
+            self.saveAccountToJsonFile( self.accountName, self._cryptoManager.encrypt(hashed_text) )
 
     @pyqtSlot(result=bool)
     def deleteAccount(self):
@@ -487,7 +442,7 @@ class AccountMdl(QObject):
         return True
 
     @staticmethod
-    def create_accountMdl_from_data(vm:dict):
+    def   create_accountMdl_from_data(vm:dict):
 
         account = AccountMdl()
         account.accountName      = vm.get("account_name" , "")

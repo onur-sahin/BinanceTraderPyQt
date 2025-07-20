@@ -23,7 +23,7 @@ AccountSelectForm{
 
 
     btn_pullAccounts.onClicked:{
-        addAccountMdl.loadFromDatabaseRequested();  //this is a signal capture inside AddAccountMdl::AddAccountMdl
+        accountListModelMdl.loadFromDatabaseRequested();  //this is a signal capture inside AddAccountMdl::AddAccountMdl
     }
 
     btn_delAccount.onClicked:{
@@ -52,13 +52,13 @@ AccountSelectForm{
     }
 
 
-    Connections {
-        target: addAccountMdl
-        function onNewAccountCreated(account) {
-            accountListModelMdl.addItem(account)
+    // Connections {
+    //     target: addAccountMdl
+    //     function onNewAccountCreated(account) {
+    //         accountListModelMdl.addItem(account)
 
-        }
-    }
+    //     }
+    // }
 
     Dialog{
 
