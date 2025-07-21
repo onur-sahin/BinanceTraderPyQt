@@ -35,7 +35,6 @@ class DBManager:
             self.password     = password
             self.host         = host
             self.port         = port
-            self.conn         = None
 
 
     def connect(self, dbname: str, user: str, password: str, host: str, port: str) -> None:
@@ -48,11 +47,11 @@ class DBManager:
         self.port     = port
 
         try:
-            self.conn = psycopg2.connect( dbname   = self.dbname,
-                                          user     = self.user,
-                                          password = self.password,
-                                          host     = self.host,
-                                          port     = self.port)
+            psycopg2.connect( dbname   = self.dbname,
+                              user     = self.user,
+                              password = self.password,
+                              host     = self.host,
+                              port     = self.port)
             
         except Exception as e:
             raise psycopg2.DatabaseError(f"Failed to connect to database: {e} ") from e
@@ -69,6 +68,21 @@ class DBManager:
                                                       host     = self.host,
                                                       port     = self.port)
         return self._thread_local.conn
+    
+    def commit_connection(self, conn) -> str:
+        """Verilen bağlantıda commit yapar. 
+        Başarılı olursa boş string döner, hata varsa açıklama mesajı döner."""
+
+        try:
+            conn.commit()
+            return ""  # Başarılı
+        except Exception as commit_error:
+            # Commit başarısız, rollback deneyelim
+            try:
+                conn.rollback()
+            except Exception as rollback_error:
+                return f"Commit failed: {commit_error}. Additionally, rollback failed: {rollback_error}"
+            return f"Commit failed: {commit_error}"
 
 
     def cleanup(self):
@@ -151,10 +165,11 @@ class DBManager:
         return Success(result)
 
 
-    def execute(self, query:str, bindValues:dict|None = None) -> Result[None, Exception]:
+    def execute(self, query:str, bindValues:dict|None = None, conn:connection=None, commit:bool=True) -> Result[None, Exception]:
 
         try:
-            conn   = self.get_connection()
+            if conn == None:
+                conn  = self.get_connection()
             cursor = conn.cursor()
 
             if(bindValues is None):
@@ -162,7 +177,8 @@ class DBManager:
             else:
                 cursor.execute(query, bindValues)
 
-            conn.commit()
+            if commit:
+                conn.commit()
 
             cursor.close()
 

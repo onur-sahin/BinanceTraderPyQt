@@ -34,6 +34,7 @@ class AccountListModelMdl(QAbstractListModel):
         return None
 
     def roleNames(self):
+
         return {
             self.AccountObjRole: QByteArray(b"accountObj")
         }
@@ -71,17 +72,6 @@ class AccountListModelMdl(QAbstractListModel):
                 return idx
         return -1
 
-    # @classmethod
-    # @pyqtSlot(str, result=int)
-    # def findIndexByAccountName(cls, account_name: str) -> int:
-    #     """
-    #     Verilen account_name'e sahip item'ın index'ini döndürür.
-    #     Yoksa -1 döndürür.
-    #     """
-    #     for idx, item in enumerate(cls.m_items):
-    #         if getattr(item, "accountName", None) == account_name:
-    #             return idx
-    #     return -1
 
     @staticmethod
     def get_account_keys_from_json():

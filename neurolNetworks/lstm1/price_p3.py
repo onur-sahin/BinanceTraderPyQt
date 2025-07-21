@@ -13,15 +13,14 @@ import sys
 
 
 
-class Lstm_1(L.LightningModule):
+class price_p3(L.LightningModule):
 
     finished  = Signal()
 
-    def __init__(self, num_classes, input_size, hidden_size=3, num_layers=1, seq_length=11, lims=[-1, 1], model_name="default"):
+    def __init__(self, input_size, hidden_size=3, num_layers=1, seq_length=11, lims=[-1, 1], model_name="default"):
         super().__init__()
 
         self.model_name  = model_name
-        self.num_classes = num_classes
         self.input_size  = input_size
         self.hidden_size = hidden_size
         self.num_layers  = num_layers

@@ -15,16 +15,16 @@ from ModelListModelMdl   import ModelListModelMdl
 class RootCoord(QObject):
     def __init__(self, engine: QQmlApplicationEngine):
         super().__init__(parent=engine)
-        self.engine          = engine
-        self.model           = ItemModel(["Item 1", "Item 2", "Item 3"])
+        self.engine              = engine
+        self.model               = ItemModel(["Item 1", "Item 2", "Item 3"])
 
-        self.dBLoginMdl      = DBLoginMdl(self)
-        self.addModelMdl     = ModelMdl(self)
-        self.addAccountMdl   = AccountMdl(self)
+        self.dBLoginMdl          = DBLoginMdl(self)
+        self.addModelMdl         = ModelMdl(self)
+        self.addAccountMdl       = AccountMdl(self)
 
         self.accountListModelMdl = AccountListModelMdl(self)
-        self.modelListModelMdl = ModelListModelMdl(self)
-    
+        self.modelListModelMdl   = ModelListModelMdl(self)
+
 
     def load_qml(self):
         context = self.engine.rootContext()
@@ -43,11 +43,9 @@ class RootCoord(QObject):
         qmlRegisterSingletonType(AccountTypes, "com.binancetrader.Enums.AccountTypes", 1, 0, lambda engine, script:AccountTypes(), name="AccountTypes")
 
 
-        qmlRegisterType(AccountMdl,"com.binancetrader.AccountMdl" , 1, 0, "AccountMdl" );
-        # qmlRegisterType<ModelMdl  > ("com.binancetrader.ModelMdl"   , 1, 0, "ModelMdl"   );
+        qmlRegisterType( AccountMdl, "com.binancetrader.AccountMdl" , 1, 0, "AccountMdl" )
+        qmlRegisterType( ModelMdl,   "com.binancetrader.ModelMdl"   , 1, 0, "ModelMdl"   )
         # qmlRegisterType<PullDataMdl>("com.binancetrader.PullDataMdl", 1, 0, "PullDataMdl");
-
-
 
         context.setContextProperty("dBLoginMdl"         , self.dBLoginMdl         )
         context.setContextProperty("addModelMdl"        , self.addModelMdl        )

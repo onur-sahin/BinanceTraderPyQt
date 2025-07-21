@@ -53,7 +53,7 @@ class LogManager(QObject):
 
         context_info = ""
         if context.file:
-            if mode in (QtMsgType.QtCriticalMsg, QtMsgType.QtFatalMsg):
+            if mode in (QtMsgType.QtCriticalMsg, QtMsgType.QtWarningMsg, QtMsgType.QtFatalMsg):
                 context_info = f"({context.file}:{context.line}, {context.function})"
             else:
                 context_info = f"({context.file})"

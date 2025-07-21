@@ -7,6 +7,9 @@ import QtQuick.Layouts
 AddModelForm{
 
     tf_modelName.text           : addModelMdl.modelName
+    tf_defaultPair.text         : addModelMdl.defaultPair
+    tf_windowSize.text          : addModelMdl.windowSize
+    tf_defaultInterval.text     : addModelMdl.defaultInterval
     cb_modelType.model          : addModelMdl.listOfModelTypes
     cb_modelType.onModelChanged : cb_modelType.model.count>0 ? 0 : -1
 
@@ -34,14 +37,12 @@ AddModelForm{
         addModelMdl.printModel();
 
 
-        // addModelMdl.save_model();
-        // addModelMdl.setmodelname();
         
         let result = addModelMdl.save_model();
 
         messageDialog.title = "Model Save Status";
 
-        if (result) {
+        if (result == "") {
             messageDialog.messageText = "✅ " + "\'" + addModelMdl.modelName + "\'" + " model is successfully saved.";
 
         } else {

@@ -1,18 +1,27 @@
 from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty, pyqtSlot, QThread, QMutex
-from PyQt6.QtCore import Qt
-import os
+from PyQt6.QtCore import Qt, qCritical, QVariant
+import importlib.util
+import os, io
+from psycopg2 import Binary
+import torch
+from returns.result import Failure
 import subprocess
+
+from DBManager import DBManager
+from Queries import Queries, Q
+
 
 
 class ModelMdl(QObject):
 
-    modelNameChanged        = pyqtSignal()
-    defaultPairChanged      = pyqtSignal()
-    windowSizeChanged       = pyqtSignal()
-    defaultIntervalChanged  = pyqtSignal()
-    modelTypeChanged        = pyqtSignal()
-    notesChanged            = pyqtSignal()
-    listOfModelTypesChanged = pyqtSignal()
+    modelNameChanged            = pyqtSignal()
+    defaultPairChanged          = pyqtSignal()
+    windowSizeChanged           = pyqtSignal()
+    defaultIntervalChanged      = pyqtSignal()
+    modelTypeChanged            = pyqtSignal()
+    notesChanged                = pyqtSignal()
+    listOfModelTypesChanged     = pyqtSignal()
+    dictOfNeurolNetworksChanged = pyqtSignal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -27,10 +36,19 @@ class ModelMdl(QObject):
         self._listOfModels     = []
         self._listOfModels.append(self)
 
-        self._process = None
-        self._thrd = None
+        self._dictOfNeurolNetworks = {}
 
-        self._networksStatus   = None 
+        self._process          = None
+        self._thrd             = None
+
+        self._networksStatus   = None
+
+
+        self.modelName        = "default"
+        self.defaultPair      = "BTCUSDT"
+        self.windowSize       = 11
+        self.defaultInterval  = "5m"
+        self.notes            = ""
 
     # Properties with getter and setter methods
 
@@ -103,12 +121,140 @@ class ModelMdl(QObject):
         self._listOfModelTypes = list_of_model_types
         self.listOfModelTypesChanged.emit()
 
+
+    @pyqtProperty(QVariant, notify=dictOfNeurolNetworksChanged)
+    def dictOfNeurolNetworks(self):
+        return self._dictOfNeurolNetworks
+
     # Methods
 
-    @pyqtSlot(result=bool)
-    def save_model(self):
+    def networkNames_from_networksStatus(self)->list:
+        networkNames = []
+        for l in self.networksStatus:
+            if l[0] not in networkNames:
+                networkNames.append( l[0] )
 
-        return True
+        return networkNames
+    
+    def get_inputSize(self, networkName:str)->int:
+        
+        inputSize = 0
+
+        for l in self.networksStatus:
+            if l[0] == networkName:
+                if l[2] == True:
+                    inputSize += 1
+
+        return inputSize
+
+
+    @pyqtSlot(result=str)
+    def save_model(self)->str:
+        
+        networkNames = self.networkNames_from_networksStatus()
+        base_path = "neurolNetworks/" + self.modelType
+
+        db         = DBManager.get_instance()
+        conn       = db.get_connection()
+
+
+        for networkName in networkNames:
+            module_path = os.path.join(base_path, f"{networkName}.py")
+            module_name = f"{self.modelType}.{networkName}"
+
+
+            try:
+                spec = importlib.util.spec_from_file_location(module_name, module_path)
+                if spec is None:
+                   raise ImportError(f"Cannot load spec for module: {module_name}")
+
+                module = importlib.util.module_from_spec(spec)
+
+                spec.loader.exec_module(module)
+
+                cls = getattr(module, networkName)
+
+                inputSize = self.get_inputSize(networkName)
+                
+                if inputSize == 0:
+                    continue
+
+                modelInstance   = cls(
+                    input_size  = inputSize, # how many feature will be use price_p, volum_p... etc.
+                    hidden_size = 32, # must be greater than input size (32-128)
+                    num_layers  = 2,
+                    seq_length  = self.windowSize,
+                    model_name  = self.modelName
+                )
+
+            except FileNotFoundError as e:
+                msg = f"Error: File not found: {module_path} : {str(e)}"
+                qCritical(msg)
+                return msg
+            except SyntaxError as e:
+                msg = f"Syntax error in {module_path}: {str(e)}"
+                qCritical(msg)
+                return msg
+            except ImportError as e:
+                msg = f"Import error: {str(e)}"
+                qCritical(msg)
+                return msg
+            except AttributeError as e:
+                msg = f"Attribute error: {str(e)}"
+                qCritical(msg)
+                return msg
+            except TypeError as e:
+                msg = f"Constructor error: {str(e)}"
+                qCritical(msg)
+                return msg
+            except Exception as e:
+                msg = f"Unexpected error: {str(e)}"
+                qCritical(msg)
+                return msg
+
+            self.dictOfNeurolNetworks[networkName] = modelInstance
+            self.dictOfNeurolNetworksChanged.emit()
+
+
+
+        
+        bindValues = {}
+        bindValues["model_name"      ] = self.modelName
+        bindValues["model_type"      ] = self.modelType
+        bindValues["default_pair"    ] = self.defaultPair
+        bindValues["default_interval"] = self.defaultInterval
+        bindValues["window_size"     ] = self.windowSize
+
+        result = db.execute(Queries.get(Q.INSERT_MODEL), bindValues, conn=conn, commit=False)
+
+        if isinstance(result, Failure):
+            qCritical(str(result.failure()))
+            return str(result.failure())
+
+        for networkName, model in self.dictOfNeurolNetworks.items():
+            buffer     = io.BytesIO()
+            torch.save(model.state_dict(), buffer)
+
+            bindValues["network_name"] = networkName
+            bindValues["bytea_object"] = Binary(buffer.getvalue())
+
+            result = db.execute(Queries.get(Q.INSERT_NEUROL_MODEL), bindValues, conn=conn, commit=False)
+
+            if isinstance(result, Failure):
+                qCritical(str(result.failure()))
+                db.conn.rollback()
+                return str(result.failure())
+
+
+        result = db.commit_connection(conn)
+
+        if result != "":
+            qCritical(result)
+            db.cleanup()
+            return result
+
+
+        return ""
 
     def processModelsParallel(self):
         map(self.update_model_types, self._listOfModels)
