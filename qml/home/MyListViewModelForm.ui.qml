@@ -38,7 +38,7 @@ ListView {
                     id: firstField
                     anchors.centerIn:parent
                     width: parent.width
-                    text: model.modelName
+                    text: modelObj.modelName
                     readOnly: true
                     focus: true  // Çift tıklanınca odak alması için
                 }
@@ -52,28 +52,28 @@ ListView {
                 }
             }
 
-            // Rectangle {
-            //     width: parent.width / 3
-            //     height: parent.height
-            //     color: "transparent"
+            Rectangle {
+                width: parent.width / 3
+                height: parent.height
+                color: "transparent"
 
-            //     TextField {
-            //         id: secondField
-            //         anchors.centerIn:parent
-            //         width: parent.width
-            //         text: model.second
-            //         readOnly: true
-            //         focus: true
-            //     }
+                TextField {
+                    id: secondField
+                    anchors.centerIn:parent
+                    width: parent.width
+                    text: modelObj.notes
+                    readOnly: true
+                    focus: true
+                }
 
-            //     MouseArea {
-            //         id: mouseArea_second
-            //         anchors.fill: parent
-            //         acceptedButtons: Qt.LeftButton
-            //         propagateComposedEvents: true
-            //         onDoubleClicked: clicked_mouseArea_second(index)
-            //     }
-            // }
+                MouseArea {
+                    id: mouseArea_second
+                    anchors.fill: parent
+                    acceptedButtons: Qt.LeftButton
+                    propagateComposedEvents: true
+                    onDoubleClicked: clicked_mouseArea_second(index)
+                }
+            }
 
             // Rectangle {
             //     width: parent.width / 3

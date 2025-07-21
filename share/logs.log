@@ -1,0 +1,114 @@
+[20:03:25 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:03:30 21-07-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:03:32 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:03:35 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:05:35 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:05:37 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[20:05:38 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:21:15 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:21:18 21-07-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:21:21 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:21:21 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:21:37 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:231, save_model)
+[22:24:02 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:24:07 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:24:08 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:24:20 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[22:25:57 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:26:00 21-07-2025] [Debug   ] created model type: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:26:03 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:26:03 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:26:17 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[22:29:23 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:29:25 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:29:26 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:29:37 21-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 178, in execute
+    cursor.execute(query, bindValues)
+KeyError: 'notes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 229, in save_model
+    result = db.execute(Queries.get(Q.INSERT_MODEL), bindValues, conn=conn, commit=False)
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 191, in execute
+    print(e.pgerror)
+AttributeError: 'KeyError' object has no attribute 'pgerror' 
+[22:30:25 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:30:27 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:30:28 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:30:40 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[22:34:31 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:34:33 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:34:36 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:34:47 21-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 229, in save_model
+    result = db.execute(Queries.get(Q.INSERT_MODEL), bindValues, conn=conn, commit=False)
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 178, in execute
+    cursor.execute(query, bindValues)
+KeyError: 'notes' 
+[22:42:44 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:42:45 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:42:48 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:42:58 21-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py", line 229, in save_model
+    result = db.execute(Queries.get(Q.INSERT_MODEL), bindValues, conn=conn, commit=False)
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 179, in execute
+    cursor.execute(query, bindValues)
+KeyError: 'notes' 
+[22:49:50 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:49:54 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:49:54 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:50:08 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[22:53:15 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:53:17 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:53:18 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[22:53:29 21-07-2025] [Critical] 'notes' (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[23:36:00 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:36:02 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:36:03 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:36:15 21-07-2025] [Critical] column "notes" of relation "tbl_models" does not exist
+LINE 2: ...el_type, default_pair, default_interval, window_size, notes)
+                                                                 ^
+ (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[23:38:25 21-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:38:29 21-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:38:29 21-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[23:38:46 21-07-2025] [Critical] relation "tbl_models" does not exist
+LINE 2:             INSERT INTO tbl_models (model_name, model_type, ...
+                                ^
+ (/home/adam/proj/BinanceTraderPyQt/models/ModelMdl.py:232, save_model)
+[00:03:23 22-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/dBLogin/DBLogin.qml:30: TypeError: Property 'initialize_database' of object DBLoginMdl(0x55f1fcdf4e90) is not a function (file:///home/adam/proj/BinanceTraderPyQt/qml/dBLogin/DBLogin.qml:30, None)
+[00:46:48 22-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/DBLoginMdl.py", line 131, in initialize_database
+    return self.dBManager.initialize_database()
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 220, in initialize_database
+    ensure_tables_expected = self.ensure_tables_exists()
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 267, in ensure_tables_exists
+    print(query_result.unwrap()[0] )  
+IndexError: list index out of range 
+[00:49:54 22-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/DBLoginMdl.py", line 131, in initialize_database
+    return self.dBManager.initialize_database()
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 220, in initialize_database
+    ensure_tables_expected = self.ensure_tables_exists()
+  File "/home/adam/proj/BinanceTraderPyQt/database/DBManager.py", line 268, in ensure_tables_exists
+    db.execute(Queries.get(Q.table_name))
+  File "/home/adam/miniconda3/envs/binancetraderpyqt/lib/python3.10/enum.py", line 437, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: table_name 
+[01:20:15 22-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:20:18 22-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:20:18 22-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:20:40 22-07-2025] [Warning ] file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:41:21: Unable to assign [undefined] to QString (file:///home/adam/proj/BinanceTraderPyQt/qml/home/MyListViewModelForm.ui.qml:41, None)
+[01:24:02 22-07-2025] [Fatal   ] Traceback (most recent call last):
+  File "/home/adam/proj/BinanceTraderPyQt/models/ModelListModelMdl.py", line 23, in data
+    if role == self.ModelNameRole:
+AttributeError: 'ModelListModelMdl' object has no attribute 'ModelNameRole'. Did you mean: 'ModelObjRole'? 
+[01:30:11 22-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:30:16 22-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:30:16 22-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:33:52 22-07-2025] [Debug   ] cb_modelType.currentText: lstm2 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:33:55 22-07-2025] [Debug   ] cb_modelType.currentText: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)
+[01:33:56 22-07-2025] [Debug   ] created model type: lstm1 (file:///home/adam/proj/BinanceTraderPyQt/qml/home/AddModel.qml)

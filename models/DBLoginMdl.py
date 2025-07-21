@@ -126,6 +126,7 @@ class DBLoginMdl(QObject):
     def update_connection_test_result(self, msg):
         self.connectionTestResult = msg
 
+    @pyqtSlot(result=bool)
     def initialize_database(self):
         return self.dBManager.initialize_database()
 
@@ -136,5 +137,4 @@ if __name__ == "__main__":
 
     db_login_model.database = "new_database"
     db_login_model.test_database_connection()
-    db_login_model.save_database_connection()
     db_login_model.initialize_database()

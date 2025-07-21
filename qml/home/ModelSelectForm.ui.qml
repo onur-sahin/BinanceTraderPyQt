@@ -4,8 +4,10 @@ import QtQuick.Layouts
 import QtQuick.Controls.Fusion
 
 ColumnLayout{
-    property alias btn_addModel : btn_addModel
-    property alias btn_delModel : btn_delModel
+    property alias btn_addModel  : btn_addModel
+    property alias btn_delModel  : btn_delModel
+    property alias btn_pullModels: btn_pullModels
+
 
     Item{
         Layout.fillWidth:true
@@ -53,6 +55,11 @@ ColumnLayout{
 
 
     RowLayout{
+        Button{
+            id: btn_pullModels
+            text:"Pull Models"
+            Layout.fillWidth:true
+        }
         Button{
             id:btn_addModel
             text:"Add Model"

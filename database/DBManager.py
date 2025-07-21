@@ -1,8 +1,11 @@
 import psycopg2
 import threading
 from psycopg2.extensions import connection
+import traceback
+import subprocess
+import os
 from returns.result import Result, Success, Failure
-
+from Queries import Queries, Q
 class DBManager:
     _instance = None
     _lock = threading.Lock()
@@ -97,6 +100,13 @@ class DBManager:
 
 
     def test_database_connection(self, dbname: str, user: str, password: str, host: str, port: str):
+
+        installation_expected = self.check_postgresql_installation()
+        
+        if installation_expected != "":  # hata mesajı döndü
+            msg =f"Error in check_postgresql_installation(): {installation_expected}"
+            print( msg )
+            raise RuntimeError(msg)
         
         self.connect(dbname, user,password, host, port)
 
@@ -117,11 +127,15 @@ class DBManager:
             result = cursor.fetchall()
             cursor.close()
 
-        except Exception as e:
+        except psycopg2.Error as e:
 
             if conn:
                 conn.rollback()
+                return Failure(e)
+        
+            return Failure(e)
 
+        except Exception as e:
             return Failure(e)
         
         finally:
@@ -151,11 +165,15 @@ class DBManager:
 
             cursor.close()
 
-        except Exception as e:
+        except psycopg2.Error as e:
 
             if conn:
                 conn.rollback()
+                return Failure(e)
+        
+            return Failure(e)
 
+        except Exception as e:
             return Failure(e)
         
         finally:
@@ -184,16 +202,167 @@ class DBManager:
 
             return Success(None)
 
-        except Exception as e:
+        except psycopg2.Error as e:
 
             if conn:
                 conn.rollback()
+                return Failure(e)
+        
+            return Failure(e)
 
-            return Failure( e )
+        except Exception as e:
+            return Failure(e)
         
         finally:
             if cursor:
                 cursor.close()
+
+
+    def initialize_database(self) -> bool:
+
+        ensure_tables_expected = self.ensure_tables_exists()
+        if ensure_tables_expected != "":
+            print(f"Error in ensure_tables_exists(): {ensure_tables_expected}")
+            return False
+
+        # update_functions_expected = self.update_tbl_functions(None)
+        # if isinstance(update_functions_expected, str):
+        #     print(f"Error in update_tbl_functions(): {update_functions_expected}")
+        #     return False
+
+        print("Database successfully initialized")
+        return True
+
+    def check_postgresql_installation(self)->str:
+        # Çalışma dizininden bash script çalıştırılıyor
+
+        script_path = "./share/check_postgresql_installation.sh"
+        try:
+            result = subprocess.run([script_path], check=False)
+        except Exception as e:
+            return f"Exception running script: {e}"
+
+        exit_code = result.returncode
+
+        if exit_code == 0:
+            print("Postgresql is available")
+            return ""  # Başarılı, hata yok
+        elif exit_code == 127:
+            return f"File not found: {script_path} Error Code: {exit_code}"
+        else:
+            return f"Error executing bash script. Error Code: {exit_code} from: {script_path}"
+        
+
+    def ensure_tables_exists(self)->str:
+        # Burada execute_dml_dql_query ve execute_ddl_dcl_tcl_query fonksiyonları
+        # DB sorguları çalıştıran fonksiyonlar olarak kabul ediliyor.
+        # Bunlar hata durumunda string, başarılı durumda None döndürüyor.
+
+        db = DBManager.get_instance()
+
+        table_names = {"tbl_accounts"         :Queries.get(Q.CREATE_ACCOUNT_TABLE       ),
+                       "tbl_models"           :Queries.get(Q.CREATE_MODEL_TABLE         ),
+                       "tbl_neurol_networks"  :Queries.get(Q.CREATE_NEUROL_NETWORK_TABLE),
+                       "tbl_kline_table_names":Queries.get(Q.CREATE_KLINE_TABLE         )
+                       }
+
+
+        for table_name, createQueryStr in table_names.items():
+            query_result = db.execute_select_return_list(Queries.get(Q.SELECT_TABLE_EXISTS), {"table_name": table_name})
+
+            if isinstance(query_result, Failure):
+                return f"Error in ensure_tables_exists() for {table_name}: {query_result},\n{self.format_error(query_result.failure())}"
+            
+            if len ( query_result.unwrap() ) < 1:
+                result = db.execute(createQueryStr)
+
+                if isinstance(result, Failure):
+                    msg = db.format_error(result)
+                    print(msg)
+                    return msg
+
+
+        return ""  # Başarı
+
+    def update_tbl_functions(self, name):
+        if name is None:
+            table_names_result = self.execute_dml_dql_query("selectKlineTableNames")
+            if isinstance(table_names_result, str):
+                return f"Error getting kline table names in update_tbl_functions(): {table_names_result}"
+            table_names = table_names_result
+        else:
+            table_names = [{"table_name": name}]
+
+        function_query_result = self.read_fnc_derive_columns()
+        if isinstance(function_query_result, str):
+            return f"Error getting query from sql file in update_tbl_functions(): {function_query_result}"
+
+        for tbl in table_names:
+            kline_table_name = tbl["table_name"]
+            create_function_query = function_query_result.format(kline_table_name)
+            create_function_result = self.execute_ddl_dcl_tcl_query(create_function_query)
+            if isinstance(create_function_result, str):
+                return f"Error creating function on database in update_tbl_functions(): {create_function_result}"
+
+        return None
+
+
+
+
+    def format_error(error: Exception) -> str:
+        """
+        Hata tipine göre en kapsamlı detayları string olarak döndürür.
+        - psycopg2.Error için: pgerror, pgcode, diag detayları
+        - Diğer Exception için: args, message, cause, context
+        - Her durumda traceback eklenir
+        """
+        details = []
+
+        # Hata tipi
+        details.append(f"[TYPE] {type(error).__name__}")
+
+        if isinstance(error, psycopg2.Error):
+            # PostgreSQL hata mesajı
+            if getattr(error, 'pgerror', None):
+                details.append(f"[PGERROR] {error.pgerror.strip()}")
+            if getattr(error, 'pgcode', None):
+                details.append(f"[PGCODE] {error.pgcode}")
+
+            # Diagnostic detayları
+            if hasattr(error, 'diag'):
+                diag = error.diag
+                diag_details = {
+                    "Primary": getattr(diag, 'message_primary', None),
+                    "Detail": getattr(diag, 'message_detail', None),
+                    "Hint": getattr(diag, 'message_hint', None),
+                    "Schema": getattr(diag, 'schema_name', None),
+                    "Table": getattr(diag, 'table_name', None),
+                    "Constraint": getattr(diag, 'constraint_name', None),
+                    "Position": getattr(diag, 'statement_position', None),
+                }
+                for key, value in diag_details.items():
+                    if value:
+                        details.append(f"[{key}] {value}")
+        else:
+            # Genel Python Exception
+            if error.args:
+                details.append(f"[ARGS] {error.args}")
+            details.append(f"[MESSAGE] {str(error)}")
+
+        # Zincirleme hata bilgileri
+        if getattr(error, '__cause__', None):
+            details.append(f"[CAUSE] {repr(error.__cause__)}")
+        if getattr(error, '__context__', None):
+            details.append(f"[CONTEXT] {repr(error.__context__)}")
+
+        # Traceback
+        tb = ''.join(traceback.format_exception(type(error), error, error.__traceback__))
+        if tb:
+            details.append("[TRACEBACK]\n" + tb.strip())
+
+        return "\n".join(details)
+
+
 
 
 

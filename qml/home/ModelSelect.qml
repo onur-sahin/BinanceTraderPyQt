@@ -13,6 +13,10 @@ ModelSelectForm{
 
     }
 
+    btn_pullModels.onClicked:{
+        modelListModelMdl.loadFromDatabaseRequested();
+    }
+
     Item{
 
         AddModel{

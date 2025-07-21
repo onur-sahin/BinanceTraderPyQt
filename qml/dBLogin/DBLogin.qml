@@ -24,18 +24,17 @@ DBLoginPage {
 
 
     btn_test_connection.onClicked:{ dBLoginMdl.test_database_connection() }
+    
     btn_login.onClicked:{
         if (dBLoginMdl.test_database_connection()){
+
+            dBLoginMdl.initialize_database()
             changeStateToHome()
+            
         }
     }
 
     ta_connection_test_result { text: dBLoginMdl.connectionTestResult }
-
-
-
-
-
 
 
 }

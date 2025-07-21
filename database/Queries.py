@@ -27,6 +27,7 @@ class Q(str, Enum):
     SELECT_NETWORK_EXIST        = "SELECT_NETWORK_EXIST"        
     SELECT_COLUMN_NAMES         = "SELECT_COLUMN_NAMES"         
     ADD_NEW_COLUMN              = "ADD_NEW_COLUMN"              
+    SELECT_TABLE_EXISTS         = "SELECT_TABLE_EXISTS"         
 
 
 
@@ -73,8 +74,8 @@ class Queries:
         """,
 
         Q.INSERT_MODEL: """
-            INSERT INTO tbl_models (model_name, model_type, default_pair, default_interval, window_size)
-            VALUES (%(model_name)s, %(model_type)s, %(default_pair)s, %(default_interval)s, %(window_size)s);
+            INSERT INTO tbl_models (model_name, model_type, default_pair, default_interval, window_size, notes)
+            VALUES (%(model_name)s, %(model_type)s, %(default_pair)s, %(default_interval)s, %(window_size)s, %(notes)s);
         """,
 
         Q.DELETE_MODEL: """
@@ -117,7 +118,8 @@ class Queries:
                 model_type VARCHAR NOT NULL,
                 default_pair VARCHAR NOT NULL,
                 default_interval VARCHAR NOT NULL,
-                window_size INTEGER NOT NULL
+                window_size INTEGER NOT NULL,
+                notes VARCHAR 
             );
         """,
 
@@ -221,7 +223,13 @@ class Queries:
         """,
 
         Q.ADD_NEW_COLUMN: """
-            ALTER TABLE {table_name} ADD COLUMN {column_name} {column_type};
+            ALTER TABLE %(table_name)s ADD COLUMN %(column_name)s %(column_type)s;
+        """,
+
+        Q.SELECT_TABLE_EXISTS:"""
+            SELECT 1
+            FROM information_schema.tables
+            WHERE table_schema = 'public' AND table_name = %(table_name)s
         """
     }
 

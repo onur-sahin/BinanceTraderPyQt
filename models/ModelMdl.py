@@ -224,6 +224,7 @@ class ModelMdl(QObject):
         bindValues["default_pair"    ] = self.defaultPair
         bindValues["default_interval"] = self.defaultInterval
         bindValues["window_size"     ] = self.windowSize
+        bindValues["notes"           ] = self.notes
 
         result = db.execute(Queries.get(Q.INSERT_MODEL), bindValues, conn=conn, commit=False)
 
@@ -241,10 +242,9 @@ class ModelMdl(QObject):
             result = db.execute(Queries.get(Q.INSERT_NEUROL_MODEL), bindValues, conn=conn, commit=False)
 
             if isinstance(result, Failure):
-                qCritical(str(result.failure()))
+                qCritical(db.format_error(result.failure()))
                 db.conn.rollback()
-                return str(result.failure())
-
+                return db.format_error(result.failure())
 
         result = db.commit_connection(conn)
 
@@ -252,7 +252,6 @@ class ModelMdl(QObject):
             qCritical(result)
             db.cleanup()
             return result
-
 
         return ""
 
@@ -302,6 +301,19 @@ class ModelMdl(QObject):
 
     def processModelsParallel(self):
         map(self.update_model_types, self._listOfModels)
+
+    @staticmethod
+    def create_modelMdl_from_data(vm:dict)->'ModelMdl':
+
+        model = ModelMdl()
+        model.modelName            = vm.get("model_name"          , "default")
+        model.defaultPair          = vm.get("default_pair"        , "BTCUSDT")
+        model.windowSize           = vm.get("window_size"         , 11)
+        model.defaultInterval      = vm.get("default_interval"    , "5m")
+        model.modelType            = vm.get("model_type"          , "")
+        model.notes                = vm.get("notes"               , "")
+
+        return model
 
     @pyqtSlot()
     def printModel(self):

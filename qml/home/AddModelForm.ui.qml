@@ -22,6 +22,7 @@ Window {
     property alias btn_networks          : btn_networks
     property alias networkWin            : networkWin
     property alias cl_network            : cl_network
+    property alias tf_notes              : tf_notes
 
     property alias btn_save_network      : btn_save_network
     property alias btn_cancel_network    : btn_cancel_network
@@ -119,6 +120,21 @@ Window {
                 text: "Networks"
             }
 
+        }
+
+        RowLayout {
+            Layout.rightMargin: 20
+            Layout.leftMargin: 20
+            Label {
+
+                Layout.preferredWidth: root.width * 0.3
+                text: "Notes:"
+            }
+            TextField {
+                id: tf_notes
+                Layout.fillWidth: true
+                placeholderText: "Your Notes"
+            }
         }
 
 

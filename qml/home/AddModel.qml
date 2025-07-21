@@ -10,13 +10,15 @@ AddModelForm{
     tf_defaultPair.text         : addModelMdl.defaultPair
     tf_windowSize.text          : addModelMdl.windowSize
     tf_defaultInterval.text     : addModelMdl.defaultInterval
+    tf_notes.text               : addModelMdl.notes
     cb_modelType.model          : addModelMdl.listOfModelTypes
     cb_modelType.onModelChanged : cb_modelType.model.count>0 ? 0 : -1
 
     tf_modelName      .onTextChanged:addModelMdl.modelName       = tf_modelName      .text 
     tf_defaultPair    .onTextChanged:addModelMdl.defaultPair     = tf_defaultPair    .text 
     tf_windowSize     .onTextChanged:addModelMdl.windowSize      = tf_windowSize     .text 
-    tf_defaultInterval.onTextChanged:addModelMdl.defaultInterval = tf_defaultInterval.text 
+    tf_defaultInterval.onTextChanged:addModelMdl.defaultInterval = tf_defaultInterval.text
+    tf_notes          .onTextChanged:addModelMdl.notes           = tf_notes          .text
    
     cb_modelType      .onCurrentIndexChanged: {
         Qt.callLater(()=> {
