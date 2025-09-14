@@ -8,13 +8,12 @@ HomeForm {
         
     //     function onAddPullDataProgressBar(){
     //         var loader = root_homePage.info.addPullDataProgressBar();
-    //         mainVM.startPullData(loader);
+
+
+    //         managementMdl.startPullData(loader);
+
     //     }
     // }
 
 
-
-    
-
-    
 }

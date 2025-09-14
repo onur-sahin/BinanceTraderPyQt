@@ -3,7 +3,7 @@ from PyQt6.QtCore import QObject, pyqtProperty, pyqtSlot
 
 
 class AccountType(Enum):
-    BINANCE = 0
+    BINANCE   = 0
     CM_FUTURE = 1
     UM_FUTURE = 2
 

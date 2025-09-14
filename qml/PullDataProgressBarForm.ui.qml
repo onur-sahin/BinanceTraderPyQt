@@ -12,23 +12,23 @@ Rectangle {
     height: root_rec.implicitHeight + 40
     Layout.leftMargin: 40
 
-    property alias root_rec: root_rec
-    property alias pb_pulldata: pb_pulldata
-    property alias pb_pulldata2: pb_pulldata2
-    property alias btn_cancel: btn_cancel
-    property alias btn_close: btn_close
-    property alias tx_infoProgressBar: tx_infoProgressBar
-    property alias rec_progbarBorder: rec_progbarBorder
-    property alias ma_progbarBorder : ma_progbarBorder
+    property alias root_rec           : root_rec
+    property alias pb_pulldata        : pb_pulldata
+    property alias pb_pulldata2       : pb_pulldata2
+    property alias btn_cancel         : btn_cancel
+    property alias btn_close          : btn_close
+    property alias tx_infoProgressBar : tx_infoProgressBar
+    property alias rec_progbarBorder  : rec_progbarBorder
+    property alias ma_progbarBorder   : ma_progbarBorder
 
 
     MouseArea {
         id:ma_progbarBorder
         anchors.fill:parent
     }
-   
-    
-    
+
+
+
     ColumnLayout {
         id: root_rec
         anchors.fill: parent

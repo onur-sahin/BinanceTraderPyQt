@@ -19,7 +19,8 @@ class AccountListModelMdl(QAbstractListModel):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.m_items = []  # Holds AccountMdl (QObject) instances
+        self.m_items       = []  # Holds AccountMdl (QObject) instances
+        self.selectedIndex = -1
 
     # Required by QAbstractListModel
     def rowCount(self, parent=QModelIndex()):

@@ -12,6 +12,8 @@ ListView {
     signal clicked_mouseArea_first(int index)
     signal clicked_mouseArea_second(int index)
     signal clicked_mouseArea_third(int index)
+    signal notes_editing_finished(int index)
+    
     property alias listView : listView
 
     model: modelListModelMdl
@@ -64,6 +66,7 @@ ListView {
                     text: modelObj.notes
                     readOnly: true
                     focus: true
+                    onEditingFinished: notes_editing_finished(index)
                 }
 
                 MouseArea {

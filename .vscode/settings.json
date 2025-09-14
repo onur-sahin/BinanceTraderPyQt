@@ -3,12 +3,16 @@
     "qt-qml.qmlls.customExePath": "/home/adam/Qt/6.8.2/gcc_64/bin/qmlls",
     "qt-qml.qmlls.enabled": true,
     "qt-qml.qmlls.additionalImportPaths": ["./qml", "/home/adam/proj/BinanceTraderPyQt/qml", "/home/adam/proj/BinanceTraderPyQt/home", "/home/adam/proj/BinanceTraderPyQt/qml/dbLogin"],
-    "python.autoComplete.extraPaths": [
-        "./models", "./qml", "assets", "controllers", "resources",
-        "./qml/dbLogin"
-    ],
+
+    // "python.autoComplete.extraPaths": [ //depricated use below
+    //     "./models", "./qml", "assets", "controllers", "resources",
+    //     "./qml/dbLogin"
+    // ],
+
     "python.analysis.extraPaths": [
-        "${env:PYTHONPATH}"
+        // "${env:PYTHONPATH}"
+        "./models", "./qml", "./assets", "./database", "./controllers", "./resources",
+        "./qml/dbLogin"
     ],
     "sqltools.connections": [
         {
@@ -21,5 +25,8 @@
             "username": "postgres",
             "password": "7532+7532+"
         }
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
 }

@@ -6,9 +6,9 @@ import QtQuick.Controls.Fusion
 Page {
     id: homePage
     
-    // property alias info       : info
+    property alias info       : info
     // property alias modelSelect: modelSelect
-    // property alias management : management
+    property alias management : management
     // property alias log        : log
 
     Rectangle {

@@ -17,7 +17,6 @@ class DBManager:
         if cls._instance is None:
             raise Exception("DBManager instance has not been created yet.")
         return cls._instance
- 
 
     def __new__(cls, dbname: str=None, user: str=None, password: str=None, host: str=None, port: str=None):
 
@@ -26,7 +25,6 @@ class DBManager:
                 cls._instance = super(DBManager, cls).__new__(cls)
                 # cls._instance.__init__(dbname, user, password, host, port) // __init__ is called automatically after __new__ completes, provided that __new__ returns an instance of cls.
         return cls._instance
-
 
     def __init__(self, dbname: str=None, user: str=None, password: str=None, host: str=None, port: str=None):
 
@@ -38,7 +36,6 @@ class DBManager:
             self.password     = password
             self.host         = host
             self.port         = port
-
 
     def connect(self, dbname: str, user: str, password: str, host: str, port: str) -> None:
         """Veritabanına bağlanır."""
@@ -58,7 +55,6 @@ class DBManager:
             
         except Exception as e:
             raise psycopg2.DatabaseError(f"Failed to connect to database: {e} ") from e
-
 
     def get_connection(self) -> connection:
         """Thread-local verileri kullanarak her thread için bağımsız bağlantı sağlar."""
@@ -87,7 +83,6 @@ class DBManager:
                 return f"Commit failed: {commit_error}. Additionally, rollback failed: {rollback_error}"
             return f"Commit failed: {commit_error}"
 
-
     def cleanup(self):
         """Tüm kaynakları serbest bırakır ve bağlantıyı kapatır."""
         if hasattr(self._thread_local, 'conn'):
@@ -97,7 +92,6 @@ class DBManager:
             except Exception as e:
                 print(f"Error while closing the connection: {e}")
         # Herhangi bir ekstra kaynak serbest bırakma işlemleri burada yapılabilir.
-
 
     def test_database_connection(self, dbname: str, user: str, password: str, host: str, port: str):
 
@@ -109,7 +103,6 @@ class DBManager:
             raise RuntimeError(msg)
         
         self.connect(dbname, user,password, host, port)
-
 
     def execute_select_return_list( self, query: str, bindValues:dict|None = None ) -> Result[list, Exception]:
 
@@ -131,8 +124,6 @@ class DBManager:
 
             if conn:
                 conn.rollback()
-                return Failure(e)
-        
             return Failure(e)
 
         except Exception as e:
@@ -182,7 +173,6 @@ class DBManager:
 
         return Success(result)
 
-
     def execute(self, query:str, bindValues:dict|None = None, conn:connection=None, commit:bool=True) -> Result[None, Exception]:
 
         try:
@@ -217,7 +207,6 @@ class DBManager:
             if cursor:
                 cursor.close()
 
-
     def initialize_database(self) -> bool:
 
         ensure_tables_expected = self.ensure_tables_exists()
@@ -225,10 +214,10 @@ class DBManager:
             print(f"Error in ensure_tables_exists(): {ensure_tables_expected}")
             return False
 
-        # update_functions_expected = self.update_tbl_functions(None)
-        # if isinstance(update_functions_expected, str):
-        #     print(f"Error in update_tbl_functions(): {update_functions_expected}")
-        #     return False
+        update_functions_expected = self.update_tbl_functions(None)
+        if update_functions_expected != "":
+            print(f"Error in update_tbl_functions(): {update_functions_expected}")
+            return False
 
         print("Database successfully initialized")
         return True
@@ -251,7 +240,6 @@ class DBManager:
             return f"File not found: {script_path} Error Code: {exit_code}"
         else:
             return f"Error executing bash script. Error Code: {exit_code} from: {script_path}"
-        
 
     def ensure_tables_exists(self)->str:
         # Burada execute_dml_dql_query ve execute_ddl_dcl_tcl_query fonksiyonları
@@ -263,8 +251,8 @@ class DBManager:
         table_names = {"tbl_accounts"         :Queries.get(Q.CREATE_ACCOUNT_TABLE       ),
                        "tbl_models"           :Queries.get(Q.CREATE_MODEL_TABLE         ),
                        "tbl_neurol_networks"  :Queries.get(Q.CREATE_NEUROL_NETWORK_TABLE),
-                       "tbl_kline_table_names":Queries.get(Q.CREATE_KLINE_TABLE         )
-                       }
+                       "tbl_kline_table_names":Queries.get(Q.CREATE_TABLE_NAMES_TABLE   )           
+                      }
 
 
         for table_name, createQueryStr in table_names.items():
@@ -286,28 +274,52 @@ class DBManager:
 
     def update_tbl_functions(self, name):
         if name is None:
-            table_names_result = self.execute_dml_dql_query("selectKlineTableNames")
-            if isinstance(table_names_result, str):
-                return f"Error getting kline table names in update_tbl_functions(): {table_names_result}"
-            table_names = table_names_result
+            table_names_result = self.execute_select_return_list(Queries.get(Q.SELECT_KLINE_TABLE_NAMES))
+            if isinstance(table_names_result, Failure):
+                return f"Error getting kline table names in update_tbl_functions(): {table_names_result.failure()}"
+            table_names = table_names_result.unwrap()
         else:
             table_names = [{"table_name": name}]
 
-        function_query_result = self.read_fnc_derive_columns()
-        if isinstance(function_query_result, str):
-            return f"Error getting query from sql file in update_tbl_functions(): {function_query_result}"
-
-        for tbl in table_names:
-            kline_table_name = tbl["table_name"]
-            create_function_query = function_query_result.format(kline_table_name)
-            create_function_result = self.execute_ddl_dcl_tcl_query(create_function_query)
-            if isinstance(create_function_result, str):
-                return f"Error creating function on database in update_tbl_functions(): {create_function_result}"
-
-        return None
+        count = 0
+        create_function_query_result = self.read_fnc_derive_columns()
+        if isinstance(create_function_query_result, Failure):
+            return f"Error getting query from sql file in update_tbl_functions(): {create_function_query_result.failure()}"
+        
+        for table_name in table_names:
+            table_name = table_name[0]
+            create_function_query = create_function_query_result.unwrap().format(table_name=table_name)
 
 
+            create_result = self.execute(create_function_query)
+            if isinstance(create_result, Failure):
+                return f"Error creating function on database in update_tbl_functions():\n{self.format_error(create_result.failure())}"
 
+        return ""
+
+    def read_fnc_derive_columns(self)->Result[str, Exception]:
+        file_path = os.path.join(os.getcwd(), "./share/derive_columns.sql")
+        
+        if not os.path.exists(file_path):
+            return Failure( FileNotFoundError(f"File not found: {file_path}") )
+
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                sql_query = file.read()
+            return Success( sql_query)
+        except Exception as e:
+            return Failure(e)
+
+    def drive_columns(self, table_name, startTs, endTs, preDeltaMs):
+        result = self.execute(  Queries.get(Q.SELECT_DRIVE_COLUMNS),
+                                {"table_name": table_name,
+                                "startTs"   : startTs,
+                                "endTs"     : endTs,
+                                "preDeltaMs": preDeltaMs}
+                             )
+        
+        if isinstance(result, Failure):
+            return result.failure()
 
     def format_error(error: Exception) -> str:
         """

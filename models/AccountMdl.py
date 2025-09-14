@@ -262,12 +262,9 @@ class AccountMdl(QObject):
 
 
 
-        try:
             # Hesap bilgilerini getirerek API anahtarlarının geçerliliğini kontrol et
-            account_info = Client(api_key=self.apiKey, api_secret=self.apiSecret, testnet=(not self.realAccount)).get_account()
-            print("API Key geçerli! Hesap bilgileri alındı.")
-        except BinanceAPIException as e:
-            print(f"API Key hatalı veya izinler eksik: {e}")
+            binanceDriver = BinanceDriver(self)
+            return BinanceDriver.test_binance_credentials(self.apiKey, self.apiSecret, )
 
         # respond = Binance.binance_api_request(
         #     self.apiKey,
@@ -281,7 +278,6 @@ class AccountMdl(QObject):
         #     self.testResult = respond
         #     return False
         # self.testResult = "Account is valid"
-        return True
 
     @staticmethod
     def saveAccountToJsonFile(account_name: str, hash_value: str) -> Result[None, Exception]:

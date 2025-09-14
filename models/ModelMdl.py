@@ -128,6 +128,19 @@ class ModelMdl(QObject):
 
     # Methods
 
+    @pyqtSlot(str)
+    def update_model_notes(self, notes:str):
+
+        db = DBManager.get_instance()
+
+        query = Queries.get(Q.UPDATE_MODEL_NOTES)
+
+        result = db.execute(query, {"notes":notes, "model_name":self.modelName})
+
+        if isinstance(result, Failure):
+            qCritical(f"Failere in update_model_notes(): {str( result.failure() )}")
+
+
     def networkNames_from_networksStatus(self)->list:
         networkNames = []
         for l in self.networksStatus:

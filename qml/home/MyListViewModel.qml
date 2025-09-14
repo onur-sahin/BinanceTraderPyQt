@@ -38,4 +38,18 @@ MyListViewModelForm{
         }
     }
 
+    Connections{
+        target:listView
+
+        function onNotes_editing_finished(index){
+            var obj = listView.itemAtIndex(index).children[0].children[1].children[0]
+
+            // for( var i of obj){
+            //     console.log(i)
+            // }
+            listView.model.getItem(index).update_model_notes(obj.text)
+            obj.focus = false
+        }
+    }
+
 }

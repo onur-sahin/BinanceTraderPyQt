@@ -1,4 +1,5 @@
 from enum import Enum
+from psycopg2 import sql
 
 
 class Q(str, Enum):
@@ -6,7 +7,6 @@ class Q(str, Enum):
     INSERT_ACCOUNT              = "INSERT_ACCOUNT"              
     UPDATE_ACCOUNT_NOTES        = "UPDATE_ACCOUNT_NOTES"        
     DELETE_ACCOUNT              = "DELETE_ACCOUNT"              
-    SELECT_OPEN_TIME            = "SELECT_OPEN_TIME"            
     SELECT_QUERY                = "SELECT_QUERY"                
     INSERT_MODEL                = "INSERT_MODEL"                
     DELETE_MODEL                = "DELETE_MODEL"                
@@ -28,14 +28,33 @@ class Q(str, Enum):
     SELECT_COLUMN_NAMES         = "SELECT_COLUMN_NAMES"         
     ADD_NEW_COLUMN              = "ADD_NEW_COLUMN"              
     SELECT_TABLE_EXISTS         = "SELECT_TABLE_EXISTS"         
+    UPDATE_MODEL_NOTES          = "UPDATE_MODEL_NOTES"          
+    SELECT_DRIVE_COLUMNS        = "SELECT_DRIVE_COLUMNS"        
+    SELECT_TIMESTAMPS           = "SELECT_TIMESTAMPS"           
 
 
 
 class Queries:
 
+    # @classmethod
+    # def get(cls, query_name: Q) -> str:
+    #     return cls._queries[query_name]
+    
     @classmethod
-    def get(cls, query_name: Q) -> str:
-        return cls._queries[query_name]
+    def get(cls, query_name: Q, **identifiers) -> sql.SQL:
+        """
+        Query string döndürür. Eğer tablolar/kolonlar gibi identifier varsa
+        {table}, {column} şeklinde placeholder bırakılır ve burada doldurulur.
+        """
+        if query_name not in cls._queries:
+            raise ValueError(f"Query {query_name} is not defined")
+
+        query_template = cls._queries[query_name]
+
+        # sql.SQL ile wrap edip Identifier'ları formatla
+        return sql.SQL(query_template).format(
+            **{k: sql.Identifier(v) for k, v in identifiers.items()}
+        )
 
 
     _queries = {
@@ -61,12 +80,6 @@ class Queries:
         Q.DELETE_ACCOUNT:"""
             DELETE FROM tbl_accounts
             WHERE account_name=%(account_name)s
-        """,
-
-        Q.SELECT_OPEN_TIME: """
-            SELECT open_time FROM {table}
-            WHERE open_time BETWEEN %(startTs)s AND %(endTs)s
-            ORDER BY open_time ASC;
         """,
 
         Q.SELECT_QUERY: """
@@ -230,7 +243,21 @@ class Queries:
             SELECT 1
             FROM information_schema.tables
             WHERE table_schema = 'public' AND table_name = %(table_name)s
-        """
+        """,
+
+        Q.UPDATE_MODEL_NOTES:"""
+            UPDATE tbl_models
+            SET notes = %(notes)s
+            WHERE model_name=%(model_name)s
+        """,
+        Q.SELECT_DRIVE_COLUMNS:"""
+            SELECT derive_columns_%(table_names)s(%(startTs)s, %(endTs)s, %(preDeltaMs)s)
+        """,
+        Q.SELECT_TIMESTAMPS:"""
+            SELECT open_time FROM {table_name}
+            WHERE open_time BETWEEN  %(start_ts)s AND %(end_ts)s
+            ORDER BY open_time ASC;
+            """
     }
 
 

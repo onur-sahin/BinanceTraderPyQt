@@ -9,82 +9,111 @@ ManagementForm{
 
     signal addPullDataProgressBar()  //this signal is capture by home.qml
 
-    // cb_pairs.currentIndex: cb_pairs.find(mainVM.pair)
+
+    cb_pairs.currentIndex    : managementMdl.pairIndex
+
+    Component.onCompleted : {
+        Qt.callLater(()=>{
+
+        managementMdl.pairIndex     = cb_pairs.find("BTCUSDT")
+        managementMdl.interval      = "5m"
+        managementMdl.epoch         = "1"
+        managementMdl.testSpeed     = 1
+        managementMdl.maxChartCount = 300
+
+           });
+    }
+   
 
 
-    // tf_trainStart_date .text : mainVM.trainStartDate
-    // tf_trainStart_time .text : mainVM.trainStartTime
-    // tf_trainEnd_date   .text : mainVM.trainEndDate
-    // tf_trainEnd_time   .text : mainVM.trainEndTime
-    // tf_interval        .text : mainVM.interval
-    // tf_epoch           .text : mainVM.epoch
-    // tf_test_speed      .text : mainVM.testSpeed
-    // tf_max_chart_Count .text : mainVM.maxChartCount
-    // tf_testStart_date  .text : mainVM.testStartDate
-    // tf_testStart_time  .text : mainVM.testStartTime
-    // tf_testEnd_date    .text : mainVM.testEndDate
-    // tf_testEnd_time    .text : mainVM.testEndTime
+
+    tf_trainStart_date .text : managementMdl.trainStartDate
+    tf_trainStart_time .text : managementMdl.trainStartTime
+    tf_trainEnd_date   .text : managementMdl.trainEndDate
+    tf_trainEnd_time   .text : managementMdl.trainEndTime
+    tf_interval        .text : managementMdl.interval
+    tf_epoch           .text : managementMdl.epoch
+    tf_test_speed      .text : managementMdl.testSpeed
+    tf_max_chart_Count .text : managementMdl.maxChartCount
+    tf_testStart_date  .text : managementMdl.testStartDate
+    tf_testStart_time  .text : managementMdl.testStartTime
+    tf_testEnd_date    .text : managementMdl.testEndDate
+    tf_testEnd_time    .text : managementMdl.testEndTime
 
     cb_pairs           .onCurrentIndexChanged: {
         Qt.callLater(()=>{
-            mainVM.pair = cb_pairs.currentText
-        });
+            // console.log(cb_pairs.currentIndex)
+            // console.log(cb_pairs.currentText)
+            // console.log(managementMdl.pairIndex)
+            // console.log(managementMdl.pair)
+           
+            managementMdl.pairIndex = cb_pairs.currentIndex
+            managementMdl.pair      = cb_pairs.currentText
 
+            // console.log(cb_pairs.currentIndex)
+            // console.log(cb_pairs.currentText)
+            // console.log(managementMdl.pairIndex)
+            // console.log(managementMdl.pair)
+
+        });
     }
-       
+
 
     tf_trainStart_date .onTextChanged:{
         if(DatetimeValidators.onDateTextChanged(tf_trainStart_date)){
-            mainVM.trainStartDate   = tf_trainStart_date.text
+            console.log(tf_trainStart_date.text)
+            managementMdl.trainStartDate   = tf_trainStart_date.text
         }
     }
     tf_trainStart_time .onTextChanged:{
         if(DatetimeValidators.onTimeTextChanged(tf_trainStart_time)){
-            mainVM.trainStartTime = tf_trainStart_time.text
+            console.log(tf_trainStart_time.text)
+            managementMdl.trainStartTime = tf_trainStart_time.text
         }
     }
     tf_trainEnd_date   .onTextChanged:{
         if(DatetimeValidators.onDateTextChanged(tf_trainEnd_date  )){
-            mainVM.trainEndDate   = tf_trainEnd_date  .text
+            managementMdl.trainEndDate   = tf_trainEnd_date  .text
         }
     }
     tf_trainEnd_time   .onTextChanged:{
         if(DatetimeValidators.onTimeTextChanged(tf_trainEnd_time  )){
-            mainVM.trainEndTime          = tf_trainEnd_time  .text
+            managementMdl.trainEndTime          = tf_trainEnd_time  .text
         }
     }
     tf_testStart_date  .onTextChanged:{
         if(DatetimeValidators.onDateTextChanged(tf_testStart_date )){
-            mainVM.testStartDate  = tf_testStart_date .text
+            managementMdl.testStartDate  = tf_testStart_date .text
         }
     }
     tf_testStart_time  .onTextChanged:{
         if(DatetimeValidators.onTimeTextChanged(tf_testStart_time )){
-            mainVM.testStartTime    = tf_testStart_time .text
+            managementMdl.testStartTime    = tf_testStart_time .text
         }
     }
     tf_testEnd_date    .onTextChanged:{
         if(DatetimeValidators.onDateTextChanged(tf_testEnd_date   )){
-            mainVM.testEndDate  = tf_testEnd_date   .text
+            managementMdl.testEndDate  = tf_testEnd_date   .text
         }
     }
     tf_testEnd_time    .onTextChanged:{
         if(DatetimeValidators.onTimeTextChanged(tf_testEnd_time   )){
-            mainVM.testEndTime    = tf_testEnd_time   .text
+            managementMdl.testEndTime    = tf_testEnd_time   .text
         }
     }
 
-    tf_interval        .onTextChanged:mainVM.interval       = tf_interval       .text
-    tf_epoch           .onTextChanged:mainVM.epoch          = tf_epoch          .text
-    tf_test_speed      .onTextChanged:mainVM.testSpeed      = tf_test_speed     .text
-    tf_max_chart_Count .onTextChanged:mainVM.maxChartCount  = tf_max_chart_Count.text
+    tf_interval        .onTextChanged:managementMdl.interval       = tf_interval       .text
+    tf_epoch           .onTextChanged:managementMdl.epoch          = tf_epoch          .text
+    tf_test_speed      .onTextChanged:managementMdl.testSpeed      = tf_test_speed     .text
+    tf_max_chart_Count .onTextChanged:managementMdl.maxChartCount  = tf_max_chart_Count.text
 
     btn_pull_data.onClicked : {
-        addPullDataProgressBar();  // this signal is capture by home.qml
+        // addPullDataProgressBar();  // this signal is capture by home.qml
+        infoMdl.emit_addPullDataProgressBar(); // this function emit a signal and it is capture by info.qml
     }
 
     btn_start_train.onClicked :{
-        mainVM.startTrain();
+        managementMdl.startTrain();
     }
 
     

@@ -7,7 +7,7 @@ from datetime import datetime
 from binance.client import Client
 from binance.exceptions import BinanceAPIException, BinanceRequestException
 
-from AccountTypes import AccountTypes
+from AccountTypes import AccountTypes, AccountType
 
 if TYPE_CHECKING:
     from AccountMdl import AccountMdl
@@ -23,12 +23,16 @@ class BinanceDriver(QObject):
     URL_VANILLA_REAL        = "https://vapi.binance.com"         
     URL_VANILLA_MOCK        = "NOT ABSENT"                       
 
-    def __init__(self):
+
+    def __init__(self, accountMdl:AccountMdl=None):
         super().__init__()
 
         self.accountMdl:AccountMdl = None
         self.client = Client()
        
+        if accountMdl != None:
+            self.accountMdl = accountMdl
+            self.update_driver(self.accountMdl)
 
 
     def update_driver(self, accountMdl:AccountMdl):
@@ -36,8 +40,11 @@ class BinanceDriver(QObject):
         self.accountMdl        = accountMdl
         self.client.API_KEY    = self.accountMdl.apiKey
         self.client.API_SECRET = self.accountMdl.apiSecret
-
-        if self.accountMdl.accountType == AccountTypes.to_string(AccountMdl.BINANCE):
+        print("buram")
+        print(self.accountMdl.accountType)
+        print(Account Types.BINANCE)
+        print(AccountTypes.to_string(AccountTypes.BINANCE))
+        if self.accountMdl.accountType == AccountTypes.to_string(AccountTypes.BINANCE):
             if self.accountMdl.realAccount:
                 self.client.API_URL = BinanceDriver.URL_SPOT_REAL
             else:
@@ -60,11 +67,16 @@ class BinanceDriver(QObject):
 
         # client.API_URL = "https://testnet.binance.vision/api"
 
-    def fetchBinanceHistoricalData(self, symbol:str, interval:str, startTime:str, endTime:str, limit=750)->str:
 
+    def fetchHistoricalData(self, symbol:str, interval:str, startTime:str|int, endTime:str|int, limit=750)->str:
 
         trialCount = 1
 
+        if isinstance(startTime, int):
+            startTime = str(startTime)
+
+        if isinstance(endTime, int):
+            endTime = str(endTime)
 
         while trialCount <= 3:
 
@@ -115,7 +127,7 @@ class BinanceDriver(QObject):
 if __name__=="__main__":
     client = BinanceDriver()
 
-    klines = client.fetchBinanceHistoricalData("BTCUSDT", Client.KLINE_INTERVAL_5MINUTE, 1741597200000, 1741600800000)
+    klines = client.fetchHistoricalData("BTCUSDT", Client.KLINE_INTERVAL_5MINUTE, 1741597200000, 1741600800000)
     print(klines)
 
 

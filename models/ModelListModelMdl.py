@@ -11,7 +11,8 @@ class ModelListModelMdl(QAbstractListModel):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.m_items = [] # Holds ModelMdl (QObject) instances
+        self.m_items:list[ModelMdl] = [] # Holds ModelMdl (QObject) instances
+
 
     def rowCount(self, parent=QModelIndex()):
         return len(self.m_items)
@@ -36,6 +37,13 @@ class ModelListModelMdl(QAbstractListModel):
         self.beginInsertRows(QModelIndex(), row, row)
         self.m_items.append(item)
         self.endInsertRows()
+
+    @pyqtSlot(int, result=QObject)
+    def getItem(self, index):
+        """Return item by index."""
+        if 0 <= index < len(self.m_items):
+            return self.m_items[index]
+        return None
 
     @pyqtSlot(int, result=bool)
     def removeRow(self, row, parent=QModelIndex()):

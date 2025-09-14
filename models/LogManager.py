@@ -7,7 +7,7 @@ class LogManager(QObject):
     _instance = None  # Singleton instance
 
     def __init__(self):
-        super().__init__()
+        super().__init__(parent=None)
 
         current_path = Path.cwd()
         log_file_path = current_path / "share" / "logs.log"
@@ -74,3 +74,17 @@ class LogManager(QObject):
     def set_log_model(self, log_model):
         """QML veya başka yerlerden log kayıtlarını görüntülemek için bir model atanabilir."""
         self.log_model = log_model
+
+
+    def close(self):
+
+        qInstallMessageHandler(None)
+
+        if self.log_file:
+            try:
+                if self.log_file.isOpen():
+                    self.log_file.close()
+            except RuntimeError:
+                pass
+            self.log_file = None
+

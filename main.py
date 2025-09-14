@@ -9,7 +9,7 @@ import sys
 from PyQt6.QtCore import QUrl
 from PyQt6.QtQuick import QQuickView
 
-from LogManager import LogManager
+# from LogManager import LogManager
 
 import os, sys
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     current_path = Path.cwd()
     qInfo(f"current path: {current_path}".encode('utf-8'))
 
-    LogManager.instance()
+    # LogManager.instance()
 
     qml_dir = os.path.join(os.path.dirname(__file__), 'qml')  # QML dosyalarının bulunduğu klasör
     os.environ['QT_QML_IMPORT_PATH'] = qml_dir
@@ -29,4 +29,6 @@ if __name__ == "__main__":
     
     controller.load_qml()
 
-    app.exec()
+    app.aboutToQuit.connect(controller.cleanup)
+
+    sys.exit( app.exec() )

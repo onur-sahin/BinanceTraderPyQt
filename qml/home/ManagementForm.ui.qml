@@ -84,7 +84,7 @@ Item{
                     Layout.rowSpan:1
                     Layout.columnSpan:20
                     Layout.fillWidth:true
-                    currentIndex:0
+                    // currentIndex:0
                     model: filteredModel
 
                     function updateFilter(searchText) {
@@ -95,6 +95,15 @@ Item{
                                 filteredModel.append(item);
                             }
                         }
+                    }
+                }
+
+                ListView {
+                    id:lv_pairs
+                    model:pairListMdl
+
+                    delegate: Text {
+                        text: model.text
                     }
                 }
 

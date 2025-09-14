@@ -21,6 +21,10 @@ AccountSelectForm{
 
     }
 
+    myListViewAccount.onCurrentItemChanged: {
+        accountListModelMdl.selectedIndex = myListViewAccount.currentIndex
+    }
+
 
     btn_pullAccounts.onClicked:{
         accountListModelMdl.loadFromDatabaseRequested();  //this is a signal capture inside AddAccountMdl::AddAccountMdl
