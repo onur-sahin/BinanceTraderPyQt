@@ -23,7 +23,7 @@
             "name": "binancedb",
             "database": "binancedb",
             "username": "postgres",
-            "password": "7532+7532"
+            "password": "2222222222"
         }
     ],
     "python-envs.defaultEnvManager": "ms-python.python:conda",

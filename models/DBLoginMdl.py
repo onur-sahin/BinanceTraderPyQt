@@ -23,7 +23,7 @@ class DBLoginMdl(QObject):
         self.m_user                 = "postgres"
         self.m_host                 = "localhost"
         self.m_port                 = "5432"
-        self.m_password             = "7532+7532+"
+        self.m_password             = "222222222"
         self.m_rememberPassword     = Qt.CheckState.Unchecked
         self.m_connectionTestResult = "Connection Test Result: None"
 
