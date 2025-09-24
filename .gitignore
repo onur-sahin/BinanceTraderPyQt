@@ -10,6 +10,7 @@
 *.obj
 *.orig
 *.rej
+*.log
 *.so
 *.so.*
 *_pch.h.cpp
