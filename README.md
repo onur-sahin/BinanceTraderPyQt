@@ -1,1 +1,2 @@
 # BinanceTraderPyQt
+UNCOMPLETED
